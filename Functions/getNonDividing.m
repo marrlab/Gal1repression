@@ -268,3 +268,9 @@ for istrain = 1:2
 end
 
 save('./Data/NonDividing','NonDividing')
+
+xlswrite('./Data/NonDividing_WT_rep1.xlsx',NonDividing{1}.I5r1,1,'A1');
+xlswrite('./Data/NonDividing_WT_rep2.xlsx',NonDividing{1}.I5r2,1,'A1');
+
+xlswrite('./Data/NonDividing_elp6_rep1.xlsx',NonDividing{2}.I5r1,1,'A1');
+xlswrite('./Data/NonDividing_elp6_rep2.xlsx',NonDividing{2}.I5r2,1,'A1');
