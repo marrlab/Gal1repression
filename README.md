@@ -4,7 +4,7 @@ contains code and data accompanying
 
 __XXX__
 
-Lea Schuh<sup>1,2</sup>, Poonam Bheda<sup>3</sup>, Igor Kukhtevich<sup>3</sup>, Robert Schneider<sup>3,4,5,*</sup>, Carsten Marr<sup>1,*</sup>
+Lea Schuh<sup>1,2</sup>, Poonam Bheda<sup>3</sup>, Igor Kukhtevich<sup>3</sup>, Robert Schneider<sup>3,4,5,*</sup>, Carsten Marr<sup>1,* </sup>
 
 <sub><sup>
 <sup>1</sup>Institute of Computational Biology, Helmholtz Zentrum München - German Research Center for Environmental Health, 85764 Neuherberg, Germany <br>
