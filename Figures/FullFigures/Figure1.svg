@@ -58,9 +58,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="343.95276"
-     inkscape:cy="233.71255"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="420.21928"
+     inkscape:cy="215.78811"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -96,19 +96,25 @@
        transform="scale(1,-1)" />
     <g
        id="g56145-1-1"
-       transform="matrix(0.04409722,0,0,0.04409722,45.933213,-202.61643)">
+       transform="matrix(0.04409722,0,0,0.04409722,41.699877,-183.75377)">
       <g
          id="g56147-2-1"
          transform="matrix(-3.5e-7,-7.9849174,8.0037052,-3.5e-7,112.05187,6104.3091)">
         <text
-           style="font-variant:normal;font-weight:normal;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;baseline-shift:baseline;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:11.0078px;line-height:1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:middle;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="text56151-4-8"
-           x="4.5728002"
-           y="-3"><tspan
+           x="69.993423"
+           y="-2.9999988"><tspan
              sodipodi:role="line"
              id="tspan94155-6-7"
-             x="4.5728002"
-             y="-3">Gal1</tspan></text>
+             x="69.993423"
+             y="-2.9999988"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle">single cell</tspan><tspan
+             sodipodi:role="line"
+             x="69.993423"
+             y="8.4429636"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle"
+             id="tspan4709">Gal1 expression</tspan></text>
       </g>
     </g>
     <g
@@ -208,19 +214,19 @@
          style="font-size:2.82222px;fill:#000000;fill-opacity:1;stroke-width:0.352527">delay</tspan></text>
     <text
        transform="scale(1.0011758,0.99882558)"
-       style="font-variant:normal;font-weight:normal;font-size:2.82222px;line-height:1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527"
+       style="font-variant:normal;font-weight:normal;font-size:3.88056000000000001px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527;font-style:normal;font-stretch:normal;"
        id="text56091-4-5-7-9-7-4"
        x="122.34448"
        y="48.791485"><tspan
          sodipodi:role="line"
          x="122.34448"
          y="48.791485"
-         style="font-size:2.82222px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.352527"
+         style="font-size:3.88056000000000001px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.352527;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
          id="tspan4758">re-repression</tspan><tspan
          sodipodi:role="line"
          x="122.34448"
-         y="51.613705"
-         style="font-size:2.82222px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.352527"
+         y="52.672039"
+         style="font-size:3.88056000000000001px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.352527;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
          id="tspan4762">memory?</tspan></text>
     <g
        id="g8604"
@@ -16807,49 +16813,50 @@
     </g>
     <g
        id="g56085-8-7"
-       transform="matrix(0.04409722,0,0,0.04409722,31.791869,-252.93914)"
-       style="fill:#dc693c;fill-opacity:1">
+       transform="matrix(0.04409722,0,0,0.04409722,32.991657,-252.93914)"
+       style="fill:#dc693c;fill-opacity:1;">
       <g
          id="g56087-8-8"
          transform="matrix(8.0037052,0,0,7.9849174,1060.4917,6623.3291)"
-         style="fill:#dc693c;fill-opacity:1">
+         style="fill:#dc693c;fill-opacity:1;">
         <text
            transform="translate(-21,11)"
-           style="font-variant:normal;font-weight:normal;font-size:12.1px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#dc693c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#dc693c;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="text56091-4-9"><tspan
              sodipodi:role="line"
              x="0"
              y="0"
              id="tspan3545-8"
-             style="font-size:8.0057px;fill:#dc693c;fill-opacity:1">repression</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;fill:#dc693c;fill-opacity:1">repression</tspan></text>
       </g>
     </g>
     <text
        transform="scale(1.0011758,0.99882558)"
-       style="font-variant:normal;font-weight:normal;font-size:2.82222px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#646464;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527"
+       style="font-variant:normal;font-weight:normal;font-size:3.88056000000000001px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#646464;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527;font-style:normal;font-stretch:normal;"
        id="text56091-4-5-7"
-       x="53.383133"
+       x="53.052013"
        y="43.054543"><tspan
          sodipodi:role="line"
          id="tspan56089-1-4-5"
-         x="53.383133"
+         x="53.052013"
          y="43.054543"
-         style="font-size:2.82222px;fill:#646464;fill-opacity:1;stroke-width:0.352527">induction</tspan></text>
+         style="font-size:3.88056000000000001px;fill:#646464;fill-opacity:1;stroke-width:0.352527;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">induction</tspan></text>
     <g
        id="g46711-6-3-9"
-       transform="matrix(0.04409722,0,0,0.04409722,75.409379,-213.99899)">
+       transform="matrix(0.04409722,0,0,0.04409722,76.04726,-213.99899)">
       <g
          id="g46713-0-90-4"
          transform="matrix(7.995154,0,0,7.9849174,673.59215,6623.3291)">
         <text
-           style="font-variant:normal;font-weight:normal;font-size:12.1px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:11.01370000000000005px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none;font-style:normal;font-stretch:normal;"
            id="text46717-3-4-76"
            x="-51.872925"
            y="11"><tspan
              sodipodi:role="line"
              id="tspan46715-3-7-8"
              x="-51.872925"
-             y="11">time (h)</tspan></text>
+             y="11"
+             style="font-size:11.01370000000000005px;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;">time (h)</tspan></text>
       </g>
     </g>
     <g
