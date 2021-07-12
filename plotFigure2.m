@@ -123,7 +123,7 @@ ylim([0,15e7])
 xlim([0,16])
 set(gcf, 'DefaultFigureRenderer', 'painters');
 set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 9 5])
-print('-dpdf','./Figures/Fig2A','-painters')
+print('-dpdf','./Figures/Fig2B','-painters')
 
 %% Figure 2B - full data set elp6
 clearvars;
@@ -247,7 +247,7 @@ ylim([0,15e7])
 xlim([0,16])
 set(gcf, 'DefaultFigureRenderer', 'painters');
 set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 9 5])
-print('-dpdf','./Figures/Fig2B','-painters')
+print('-dpdf','./Figures/Fig2C','-painters')
 
 %% Figure 1D-E - non-dividing total GFP traces for repressions 1 and 2 for WT and elp6
 
@@ -260,8 +260,8 @@ figure('visible','off');
 %istrain = 1 - WT / = 2 - elp6
 %irep = 1 - repression 1 / = 2 - repression 2
 
-for istrain = 2
-    for irep = 2
+for istrain = 1
+    for irep = 1
         
         %define color according to strain and repression
         if istrain == 1
@@ -318,15 +318,15 @@ for istrain = 2
         set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
         if istrain == 1
             if irep == 1
-                print('-dpdf','./Figures/Fig2Dleft','-painters')
-            else
-                print('-dpdf','./Figures/Fig2Dright','-painters')
-            end
-        else
-            if irep == 1
                 print('-dpdf','./Figures/Fig2Eleft','-painters')
             else
                 print('-dpdf','./Figures/Fig2Eright','-painters')
+            end
+        else
+            if irep == 1
+                print('-dpdf','./Figures/Fig2Fleft','-painters')
+            else
+                print('-dpdf','./Figures/Fig2Fright','-painters')
             end
         end
     end
