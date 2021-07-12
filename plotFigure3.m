@@ -16,7 +16,7 @@ figure
 
 istrain = 1;
 
-for  irep = 2
+for  irep = 1
     
     %define color according to strain and repression
     if irep == 1
@@ -49,8 +49,8 @@ for  irep = 2
         ind_rand = randsample(1:length(NonDividing{istrain}.I5r2),1);
     end
     
-    ind_rand = 102;
-%     ind_rand = 71;
+%     ind_rand = 102;
+    ind_rand = 71;
     
     display(sprintf('BIC non-repressor model: %d', BIC1_1(ind_rand)))
     display(sprintf('BIC repressor model: %d', BIC1_2(ind_rand)))
@@ -136,13 +136,13 @@ for  irep = 2
     set(gca,'FontSize',11)
     set(gca,'FontName','Arial')
     xlim([0,2])
-    ylim([0,0.5])
+    ylim([0,4])
     set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
-%     if irep == 1
-%         print('-dpdf','./Figures/Fig3Bleft','-painters')
-%     else
-%         print('-dpdf','./Figures/Fig3Bright','-painters')
-%     end
+    if irep == 1
+        print('-dpdf','./Figures/Fig3Bleft','-painters')
+    else
+        print('-dpdf','./Figures/Fig3Bright','-painters')
+    end
     
 end
 
