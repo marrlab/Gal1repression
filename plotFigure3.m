@@ -1,7 +1,7 @@
 %add path
 addpath(genpath(pwd))
 
-%% Figure 3B - example fits
+%% Figure 3B top - example fits
 
 clearvars;
 clc;
@@ -145,6 +145,10 @@ for  irep = 1
     end
     
 end
+%% Figure 3B bottom - profile likelihoods
+
+%for irep = 1 and irep = 2
+getProfile
 
 %% Figure 3C-D - fits and model selection of repressions 1 and 2 and WT and elp6
 
