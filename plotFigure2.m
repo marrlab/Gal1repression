@@ -289,6 +289,16 @@ for istrain = 1
             time = (1-1)*3/60:3/60:(40-1)*3/60;
             time(indmax)
             plot(time(indmax),max(mean(NonDividing{istrain}.I5r1(:,1:40))),'.','Color','k','Markersize',12)
+            
+            for isample = 1:100000
+                S = datasample(1:size(NonDividing{istrain}.I5r1,1),round(size(NonDividing{istrain}.I5r1,1)*0.25));
+                indmax = find(mean(NonDividing{istrain}.I5r1(S,1:40))==max(mean(NonDividing{istrain}.I5r1(S,1:40))));
+                T(isample) = time(indmax);
+            end
+            
+            mean(T)
+            std(T)
+            
         else
             plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.I5r2(:,1:40),'-','Color',c)
             hold on
@@ -298,6 +308,16 @@ for istrain = 1
             time = (1-1)*3/60:3/60:(40-1)*3/60;
             time(indmax)
             plot(time(indmax),max(mean(NonDividing{istrain}.I5r2(:,1:40))),'.','Color','k','Markersize',12)
+            
+            for isample = 1:100000
+                S = datasample(1:size(NonDividing{istrain}.I5r2,1),round(size(NonDividing{istrain}.I5r2,1)*0.25));
+                indmax = find(mean(NonDividing{istrain}.I5r2(S,1:40))==max(mean(NonDividing{istrain}.I5r2(S,1:40))));
+                T(isample) = time(indmax);
+            end
+            
+            mean(T)
+            std(T)
+            
         end
         
         ylabel('GFP intensity')
