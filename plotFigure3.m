@@ -16,7 +16,7 @@ figure
 
 istrain = 1;
 
-for  irep = 1
+for  irep = 2
     
     %define color according to strain and repression
     if irep == 1
@@ -42,15 +42,17 @@ for  irep = 1
     ind1_2 = find(BIC1_2-BIC1_1<-10); %model 2 best
     ind1_1 = find(BIC1_2-BIC1_1>=-10);%model 1 best
     
-    %determine 10 randomly sampled cells which will be plotted
-    if irep == 1
-        ind_rand = randsample(1:length(NonDividing{istrain}.I5r1),1);
-    else
-        ind_rand = randsample(1:length(NonDividing{istrain}.I5r2),1);
-    end
+%     if irep == 1
+%         ind_rand = randsample(1:length(NonDividing{istrain}.I5r1),1);
+%     else
+%         ind_rand = randsample(1:length(NonDividing{istrain}.I5r2),1);
+%     end
     
-%     ind_rand = 102;
-    ind_rand = 71;
+    if irep == 1
+        ind_rand = 71;
+    else
+        ind_rand = 102;
+    end
     
     display(sprintf('BIC non-repressor model: %d', BIC1_1(ind_rand)))
     display(sprintf('BIC repressor model: %d', BIC1_2(ind_rand)))
@@ -136,19 +138,25 @@ for  irep = 1
     set(gca,'FontSize',11)
     set(gca,'FontName','Arial')
     xlim([0,2])
-    ylim([0,4])
+    if irep == 1
+        ylim([0,4])
+    else
+        ylim([0,0.5])
+    end
     set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
     if irep == 1
-        print('-dpdf','./Figures/Fig3Bleft','-painters')
+        print('-dpdf','./Figures/Fig3Btopleft','-painters')
     else
-        print('-dpdf','./Figures/Fig3Bright','-painters')
+        print('-dpdf','./Figures/Fig3Btopright','-painters')
     end
     
 end
 %% Figure 3B bottom - profile likelihoods
 
 %for irep = 1 and irep = 2
-getProfile
+getProfile(1)
+
+getProfile(2)
 
 %% Figure 3C-D - fits and model selection of repressions 1 and 2 and WT and elp6
 
