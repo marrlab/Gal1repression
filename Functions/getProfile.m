@@ -1,4 +1,4 @@
-
+function getProfile(rep)
 %model = 1 or 2 / model == 1 - non-repressor model / model == 2 - repressor model
 %rep = 1 or 2 / rep == 1 - repression 1 / rep == 2 - repression 2
 %strain = 1 or 2 / strain == 1 - WT / strain == 2 - elp6
@@ -7,7 +7,7 @@
 %pre_sol = 0 or 1 / pre_sol == 0 - do not load precomputed parameter estimates / pre_sol == 1 - load precomputed parameter estimates
 
 model = 2;
-rep = 1;
+% rep = 1;
 strain = 1;
 plt = false;
 server = false;
@@ -102,14 +102,14 @@ for imodel = model
                     %calculate Bayesian Information Criterion (BIC) for
                     %specific total GFP trace and model
                     scR(icell).sol.BIC = log(length(DA(1).y))*parameters.number-2*scR(icell).sol.MS.logPost(1);
-
+                    
                 else %if load pre-computed parameters
-                    load(sprintf('./Data/scR_strain%d_rep%d_model%d',istrain,irep,imodel))  
+                    load(sprintf('./Data/scR_strain%d_rep%d_model%d',istrain,irep,imodel))
                 end
                 
                 parameters = getParameterProfiles(scR(icell).sol,@(xi)logLikelihood_WTElp6(xi,DA,imodel),optionsPesto);
                 
-                figure
+                figure('visible','off');
                 for i = 1:length(parameters.name)-1
                     subplot(1,length(parameters.name)-1,i)
                     plot(10.^(parameters.P(i).par(i,:)),parameters.P(i).logPost,'-','Color','k')
@@ -131,9 +131,9 @@ for imodel = model
                 %save figure
                 set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 13 4])
                 if irep == 1
-                    print('-dpdf','./Figures/Fig3Cnewleft','-painters')
+                    print('-dpdf','./Figures/Fig3Bbottomleft','-painters')
                 else
-                    print('-dpdf','./Figures/Fig3Cnewright','-painters')
+                    print('-dpdf','./Figures/Fig3Bbottomright','-painters')
                 end
                 
                 if plt == 1
@@ -199,3 +199,4 @@ for imodel = model
     end
 end
 
+end
