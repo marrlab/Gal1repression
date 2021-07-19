@@ -1,7 +1,7 @@
 %add path
 addpath(genpath(pwd))
 
-%% Figure 2A - full data set WT
+%% Figure 2B - full data set WT
 clearvars;
 clc;
 
@@ -125,7 +125,7 @@ set(gcf, 'DefaultFigureRenderer', 'painters');
 set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 9 5])
 print('-dpdf','./Figures/Fig2B','-painters')
 
-%% Figure 2B - full data set elp6
+%% Figure 2C - full data set elp6
 clearvars;
 clc;
 
@@ -249,7 +249,7 @@ set(gcf, 'DefaultFigureRenderer', 'painters');
 set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 9 5])
 print('-dpdf','./Figures/Fig2C','-painters')
 
-%% Figure 1D-E - non-dividing total GFP traces for repressions 1 and 2 for WT and elp6
+%% Figure 1E-F - non-dividing total GFP traces for repressions 1 and 2 for WT and elp6
 
 clearvars;
 clc;
@@ -260,8 +260,8 @@ figure('visible','off');
 %istrain = 1 - WT / = 2 - elp6
 %irep = 1 - repression 1 / = 2 - repression 2
 
-for istrain = 1
-    for irep = 1
+for istrain = 2
+    for irep = 2
         
         %define color according to strain and repression
         if istrain == 1
