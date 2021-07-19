@@ -7,9 +7,9 @@ addpath(genpath(pwd))
 %rep = 1 - repression 1 / = 2 - repression 2
 
 strain1 = 1;
-rep1 = 1;
+rep1 = 2;
 strain2 = 2;
-rep2 = 1;
+rep2 = 2;
 paired = false;
 
 clearvars -except rep1 strain1 rep2 strain2 paired
@@ -193,9 +193,9 @@ end
 %rep = 1 - repression 1 / = 2 - repression 2
 
 strain1 = 1;
-rep1 = 1;
+rep1 = 2;
 strain2 = 2;
-rep2 = 1;
+rep2 = 2;
 
 clearvars -except rep1 strain1 rep2 strain2 paired
 clc;
