@@ -58,7 +58,7 @@ for istrain = strain1
         
         %save p-values of GFP0 comparison
         sol_GFP0.Pval = Pval;
-        save(sprintf('./Data/sol_GFP0_%d_%d',istrain,irep),'sol_GFP0')
+        save(sprintf('./Results/sol_GFP0_%d_%d',istrain,irep),'sol_GFP0')
     end
 end
 
