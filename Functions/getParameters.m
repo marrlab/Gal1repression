@@ -127,7 +127,7 @@ for imodel = model
                     end
                     
                 else %if load pre-computed parameters
-                    load(sprintf('./Data/scR_strain%d_rep%d_model%d',istrain,irep,imodel))
+                    load(sprintf('./Results/scR_strain%d_rep%d_model%d',istrain,irep,imodel))
                 end
                 
                 if plt == 1
@@ -190,7 +190,7 @@ for imodel = model
             
             %save the estimated parameters
             if pre_sol == 0
-                save(sprintf('./Data/scR_strain%d_rep%d_model%d',istrain,irep,imodel),'scR')
+                save(sprintf('./Results/scR_strain%d_rep%d_model%d',istrain,irep,imodel),'scR')
             end
         end
     end
