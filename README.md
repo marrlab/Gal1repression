@@ -2,24 +2,23 @@
 
 contains code and data accompanying 
 
-__XXX__
+__Modeling of Gal1 expression in single yeast cells reveals repression memory__
 
-Lea Schuh<sup>1,2</sup>, Poonam Bheda<sup>3</sup>, Igor Kukhtevich<sup>3</sup>, Robert Schneider<sup>3,4,5,\*</sup>, Carsten Marr<sup>1,\*</sup>
+Lea Schuh<sup>1,2,3,4</sup>, Poonam Bheda<sup>3</sup>, Igor Kukhtevich<sup>3</sup>, Robert Schneider<sup>3,5,6,\*</sup>, Carsten Marr<sup>1,2,\*</sup>
 
 <sub><sup>
 <sup>1</sup>Institute of Computational Biology, Helmholtz Zentrum München - German Research Center for Environmental Health, 85764 Neuherberg, Germany <br>
-<sup>2</sup>Department of Mathematics, Technical University of Munich, Garching, 85748, Germany <br>
+<sup>2</sup>Institute of AI for Health, Helmholtz Zentrum München - German Research Center for Environmental Health, 85764 Neuherberg, Germany <br>
 <sup>3</sup>Institute of Functional Epigenetics, Helmholtz Zentrum München - German Research Center for Environmental Health, 85764 Neuherberg, Germany <br>
-<sup>4</sup>German Center for Diabetes Research (DZD), 85764 Neuherberg, Germany <br>
-<sup>5</sup>Faculty of Biology, Ludwig-Maximilians University of Munich, 82152 Planegg-Martinsried, Germany <br>
+<sup>4</sup>Department of Mathematics, Technical University of Munich, Garching, 85748, Germany <br>
+<sup>5</sup>German Center for Diabetes Research (DZD), 85764 Neuherberg, Germany <br>
+<sup>6</sup>Faculty of Biology, Ludwig-Maximilians University of Munich, 82152 Planegg-Martinsried, Germany <br>
 *correspondence: robert.schneider@helmholtz-muenchen.de, carsten.marr@helmholtz-muenchen.de <br>
 </sup></sub>
 
 ## Summary
 
-Changing environments require cells to adapt their gene expression. Transcriptional memory facilitates such an adapted cellular response to the repeated exposure of a stimulus. While re-induction memory, a faster response to a repeated stimulus, has been widely studied in different organisms, it remains unknown whether there also exists memory in gene repression. 
-Here, we monitor galactokinase 1 (Gal1) expression in single Saccharomyces cerevisiae cells over time to identify single-cell repression kinetics. Using ordinary differential equations, multi-start maximum likelihood optimization, quantitative model selection and statistical analysis, we are able to quantitatively describe single-cell repression kinetics. We found that the repression delay is decreased upon a repeated second repression, suggesting the existence of re-repression memory. Moreover, we found that the previously identified gain-of-re-induction memory mutant Δelp6 also shows gain-of-re-repression memory by exhibiting a stronger decrease in the repression delay between first and second repression compared to wildtype cells. 
-Together, our work provides the first quantitative characterization of repression kinetics and re-repression memory at the single-cell level. <br>
+Changing environments force cells to adapt. A faster gene expression response to a repeated stimulus, called reinduction memory, facilitates such adaptation and has been widely studied in different organisms. However, it remains unknown how memory in gene repression is mediated at the single-cell level. Here, we monitored galactokinase 1 (GAL1) expression in single Saccharomyces cerevisiae cells over 16 hours to analyze gene repression kinetics introduced by carbon source switches from galactose to glucose. We describe single-cell repression kinetics with ordinary differential equations and employ model selection to quantitatively compare different repression hypotheses. Repression delay, i.e. the time between carbon source switch and termination of Gal1 expression, is decreased upon a second repression, suggesting the existence of repression memory. Moreover, we found that the previously identified gain-of-reinduction memory mutant elp6Δ also shows gain-of-repression memory, exhibiting a stronger decrease in the repression delay between first and second repression. Together, our work provides the first mechanistic characterization of repression memory at the single-cell level. <br>
 
 Required software and toolboxes:
 
