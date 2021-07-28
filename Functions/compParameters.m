@@ -144,6 +144,6 @@ sol_Par.Pval = Pval;
 sol_Par.Median = M;
 
 
-save(sprintf('./Data/sol_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
+save(sprintf('./Results/sol_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
 
 end
