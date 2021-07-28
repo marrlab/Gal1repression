@@ -172,6 +172,6 @@ if rep1 == rep2
 
 end
 
-save(sprintf('./Data/sol_GFP0_tdelay_%d_%d_%d_%d',rep1,strain1,rep2,strain2),'sol_GFP0_tdelay')
+save(sprintf('./Results/sol_GFP0_tdelay_%d_%d_%d_%d',rep1,strain1,rep2,strain2),'sol_GFP0_tdelay')
 
 end
