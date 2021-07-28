@@ -104,7 +104,7 @@ for imodel = model
                     scR(icell).sol.BIC = log(length(DA(1).y))*parameters.number-2*scR(icell).sol.MS.logPost(1);
                     
                 else %if load pre-computed parameters
-                    load(sprintf('./Data/scR_strain%d_rep%d_model%d',istrain,irep,imodel))
+                    load(sprintf('./Results/scR_strain%d_rep%d_model%d',istrain,irep,imodel))
                 end
                 
                 parameters = getParameterProfiles(scR(icell).sol,@(xi)logLikelihood_WTElp6(xi,DA,imodel),optionsPesto);
