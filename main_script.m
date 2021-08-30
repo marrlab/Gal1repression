@@ -47,6 +47,7 @@ getParameters(1,2,2,1,0,0)
 %preloading of parameters
 getParameters(2,2,2,1,0,0)
 
+
 %% Statistical Analysis - comparison of GFP0 between repressor and non-repressor model
 
 %compGFP0(strain1,rep1)
