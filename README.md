@@ -34,6 +34,7 @@ Here you can find the list of all folders contained in this repository:
 - [Data](Data)
 - [Figures](Figures)
 - [Functions](Functions)
+- [Results](Results)
 - [Segmentation](Segmentation)
 
 ## How to run the code
