@@ -2,7 +2,7 @@
 
 contains code and data accompanying 
 
-__Modeling of Gal1 expression in single yeast cells reveals repression memory__
+__Gal1 repression memory in budding yeast__
 
 Lea Schuh<sup>1,2,3,4</sup>, Poonam Bheda<sup>3</sup>, Igor Kukhtevich<sup>3</sup>, Robert Schneider<sup>3,5,6,\*</sup>, Carsten Marr<sup>1,2,\*</sup>
 
