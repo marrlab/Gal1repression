@@ -24,6 +24,7 @@ Required software and toolboxes:
 
 - MATLAB (R2017b)
 - [PESTO](https://github.com/ICB-DCM/PESTO version 1.1.9 for parameter estimation and MCMC sampling)
+- PhyloCell (https://github.com/gcharvin/phyloCell for pre-processing the PhyloCell structures to MATLAB structures)
 
 The analysis was performed on a macOS Big Sur version 11.4. <br>
 
