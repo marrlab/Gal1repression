@@ -7,6 +7,11 @@ addpath(genpath('/Users/lea.schuh/Downloads/phyloCell-dev-gcharvin-2-2.2/phyloCe
 clearvars;
 clc;
 
+if ~exist('./Data', 'dir')
+    mkdir('./Data')
+    addpath(genpath('./Data'))
+end
+
 %define the data set - define correctly segmented positions for WT and elp6
 DataExpI5{1} = sprintf('ExpI5_pos1_Y208_WT');
 DataExpI5{2} = sprintf('ExpI5_pos2_Y208_WT');
@@ -43,7 +48,7 @@ for i = 1:length(Data)
     clc;
     
     %load specific single cell data information
-    loadData = sprintf('./Segmentation/%s',Data{i});
+    loadData = sprintf('%s',Data{i});
     load(loadData);
     
     close all force
