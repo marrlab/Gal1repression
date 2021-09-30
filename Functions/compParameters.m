@@ -1,5 +1,11 @@
 function compParameters(rep1,strain1,rep2,strain2,paired)
 
+%rep1 = 1 - repression 1 / = 2 - repression 2
+%strain1 = 1 - WT / = 2 - elp6
+%rep2 = 1 - repression 1 / = 2 - repression 2
+%strain2 = 1 - WT / = 2 - elp6
+%paired = 0 - false / = 1 - true
+
 clearvars -except rep1 strain1 rep2 strain2 paired
 clc;
 
