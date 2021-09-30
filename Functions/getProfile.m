@@ -21,7 +21,7 @@ if server == 0 %adapt paths
     addpath(genpath('/Users/lea.schuh/Documents/PhD/ICB/Xenopus/PESTO-master'))
     addpath(genpath('/Users/lea.schuh/Documents/PhD/ICB/Xenopus/AMICI-master'))
     addpath(genpath(pwd))
-    load('./Data/NonDividing')
+    load('NonDividing')
 else %adapt paths
     addpath(genpath('/home/icb/lea.schuh/AMICI-master'))
     addpath(genpath('/home/icb/lea.schuh/PESTO-master'))
