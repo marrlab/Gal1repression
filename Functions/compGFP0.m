@@ -3,8 +3,8 @@ function compGFP0(strain1,rep1)
 clearvars -except strain1 rep1
 clc;
 
-%istrain = 1 - WT / = 2 - elp6
-%irep = 1 - repression 1 / = 2 - repression 2
+%strain1 = 1 - WT / = 2 - elp6
+%rep1 = 1 - repression 1 / = 2 - repression 2
 
 load('NonDividing')
 
