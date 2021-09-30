@@ -1,5 +1,11 @@
 function comp_GFP0_tdelay(rep1,strain1,rep2,strain2)
 
+%rep1 = 1 - repression 1 / = 2 - repression 2
+%strain1 = 1 - WT / = 2 - elp6
+%rep2 = 1 - repression 1 / = 2 - repression 2
+%strain2 = 1 - WT / = 2 - elp6
+
+%not paired as we look at all cells for regression fit
 paired = 0;
 
 clearvars -except rep1 strain1 rep2 strain2 paired
