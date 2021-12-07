@@ -5,7 +5,8 @@ addpath(genpath(pwd))
 clearvars;
 clc;
 
-figure('visible','off');
+% figure('visible','off');
+figure
 for istrain = 1
     
     clearvars -except istrain
@@ -14,19 +15,23 @@ for istrain = 1
         
         clear Data
         %WT
-        DataExpI5{1} = sprintf('ExpI5_pos1_Y208_WT');
-        DataExpI5{2} = sprintf('ExpI5_pos2_Y208_WT');
-        DataExpI5{3} = sprintf('ExpI5_pos4_Y208_WT');
-        DataExpI5{4} = sprintf('ExpI5_pos5_Y208_WT');
-        DataExpI5{6} = sprintf('ExpI5_pos8_Y208_WT');
-        DataExpI5{7} = sprintf('ExpI5_pos9_Y208_WT');
-        DataExpI5{8} = sprintf('ExpI5_pos10_Y208_WT');
-        DataExpI5{9} = sprintf('ExpI5_pos11_Y208_WT');
-        DataExpI5{10} = sprintf('ExpI5_pos12_Y208_WT');
-        DataExpI5{11} = sprintf('ExpI5_pos13_Y208_WT');
-        DataExpI5{12} = sprintf('ExpI5_pos14_Y208_WT');
-        DataExpI5{13} = sprintf('ExpI5_pos15_Y208_WT');
-        DataExpI5{14} = sprintf('ExpI5_pos16_Y208_WT');
+%         DataExpI5{1} = sprintf('ExpI5_pos1_Y208_WT');
+%         DataExpI5{2} = sprintf('ExpI5_pos2_Y208_WT');
+%         DataExpI5{3} = sprintf('ExpI5_pos4_Y208_WT');
+%         DataExpI5{4} = sprintf('ExpI5_pos5_Y208_WT');
+%         DataExpI5{6} = sprintf('ExpI5_pos8_Y208_WT');
+%         DataExpI5{7} = sprintf('ExpI5_pos9_Y208_WT');
+%         DataExpI5{8} = sprintf('ExpI5_pos10_Y208_WT');
+%         DataExpI5{9} = sprintf('ExpI5_pos11_Y208_WT');
+%         DataExpI5{10} = sprintf('ExpI5_pos12_Y208_WT');
+%         DataExpI5{11} = sprintf('ExpI5_pos13_Y208_WT');
+%         DataExpI5{12} = sprintf('ExpI5_pos14_Y208_WT');
+%         DataExpI5{13} = sprintf('ExpI5_pos15_Y208_WT');
+%         DataExpI5{14} = sprintf('ExpI5_pos16_Y208_WT');
+
+         DataExpL1{1} = sprintf('ExpL1_pos1_Y208_WT');
+         DataExpL1{2} = sprintf('ExpL1_pos2_Y208_WT');
+         DataExpL1{3} = sprintf('ExpL1_pos6_Y208_WT');
         
     else
         
@@ -45,7 +50,8 @@ for istrain = 1
         
     end
     
-    Data = DataExpI5;
+%     Data = DataExpI5;
+    Data = DataExpL1;
     
     Data = Data(~cellfun('isempty',Data));
     count = 0;
@@ -118,8 +124,8 @@ set(gca,'FontName','Arial')
 ylim([0,15])
 xlim([0,16])
 set(gcf, 'DefaultFigureRenderer', 'painters');
-set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
-print('-dpdf','./Figures/Fig2B','-painters')
+% set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
+% print('-dpdf','./Figures/Fig2B','-painters')
 
 %% Figure 2D - non-dividing total GFP traces for repressions r1 and r2 for WT
 
