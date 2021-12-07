@@ -1,24 +1,37 @@
-function compParameters(rep1,strain1,rep2,strain2,paired)
+function compParameters(rep1,strain1,rep2,strain2,paired,iexp)
 
 %rep1 = 1 - repression 1 / = 2 - repression 2
 %strain1 = 1 - WT / = 2 - elp6
 %rep2 = 1 - repression 1 / = 2 - repression 2
 %strain2 = 1 - WT / = 2 - elp6
 %paired = 0 - false / = 1 - true
+%iexp = 1 or 2 / iexp == 1 - main experimetn / iexp == 2 - replicate experiment 
 
-clearvars -except rep1 strain1 rep2 strain2 paired
+clearvars -except rep1 strain1 rep2 strain2 paired iexp
 clc;
 
 %load all estimated parameter sets for both models and repressions
-load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,1))
-scR1_1 = scR;
-load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,2))
-scR1_2 = scR;
+if iexp == 1
+    load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,1))
+    scR1_1 = scR;
+    load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,2))
+    scR1_2 = scR;
 
-load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,1))
-scR2_1 = scR;
-load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,2))
-scR2_2 = scR;
+    load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,1))
+    scR2_1 = scR;
+    load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,2))
+    scR2_2 = scR;
+else
+    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain1,rep1,1))
+    scR1_1 = scR;
+    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain1,rep1,2))
+    scR1_2 = scR;
+    
+    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain2,rep2,1))
+    scR2_1 = scR;
+    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain2,rep2,2))
+    scR2_2 = scR;
+end
 
 %extract BIC values for all single-cell trajectories for data set 1
 for i = 1:size(scR1_1,2)
@@ -45,7 +58,11 @@ ind2_2 = find(BIC2_2-BIC2_1<-10);
 ind2_1 = find(BIC2_2-BIC2_1>=-10);
 
 %get the data sets for both experiments
-load('NonDividing')
+if iexp == 1
+    load('NonDividing')
+else
+    load('NonDividing2')
+end
 
 if rep1 == 1
     data1 = NonDividing{strain1}.I5r1;
@@ -149,7 +166,10 @@ end
 sol_Par.Pval = Pval;
 sol_Par.Median = M;
 
-
-save(sprintf('./Results/sol_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
+if iexp == 1
+    save(sprintf('./Results/sol_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
+else
+    save(sprintf('./Results/sol2_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
+end
 
 end
