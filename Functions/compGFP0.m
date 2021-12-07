@@ -1,21 +1,32 @@
-function compGFP0(strain1,rep1)
+function compGFP0(strain1,rep1, iexp)
 
-clearvars -except strain1 rep1
+clearvars -except strain1 rep1 iexp
 clc;
 
 %strain1 = 1 - WT / = 2 - elp6
 %rep1 = 1 - repression 1 / = 2 - repression 2
 
-load('NonDividing')
+if iexp == 1
+    load('NonDividing')
+else
+    load('NonDividing2')
+end
 
 for istrain = strain1
     for irep = rep1
         
         %load estaimted parameter sets
-        load(sprintf('scR_strain%d_rep%d_model1',istrain,irep));
-        scR1_1 = scR;
-        load(sprintf('scR_strain%d_rep%d_model2',istrain,irep));
-        scR1_2 = scR;
+        if iexp == 1
+            load(sprintf('scR_strain%d_rep%d_model1',istrain,irep));
+            scR1_1 = scR;
+            load(sprintf('scR_strain%d_rep%d_model2',istrain,irep));
+            scR1_2 = scR;
+        else
+            load(sprintf('scR2_strain%d_rep%d_model1_truncated',istrain,irep));
+            scR1_1 = scR;
+            load(sprintf('scR2_strain%d_rep%d_model2_truncated',istrain,irep));
+            scR1_2 = scR;
+        end
         
         %get BIC values per total GFP trace
         for i = 1:size(scR1_1,2)
@@ -58,7 +69,12 @@ for istrain = strain1
         
         %save p-values of GFP0 comparison
         sol_GFP0.Pval = Pval;
-        save(sprintf('./Results/sol_GFP0_%d_%d',istrain,irep),'sol_GFP0')
+        
+        if iexp == 1
+            save(sprintf('./Results/sol_GFP0_%d_%d',istrain,irep),'sol_GFP0')
+        else
+            save(sprintf('./Results/sol2_GFP0_%d_%d',istrain,irep),'sol_GFP0')
+        end
     end
 end
 
