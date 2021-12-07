@@ -1,4 +1,4 @@
-function getParameters(model,rep,strain,plt,server,pre_sol)
+function getParameters(model,rep,strain,plt,server,pre_sol,iexp)
 
 %model = 1 or 2 / model == 1 - non-repressor model / model == 2 - repressor model
 %rep = 1 or 2 / rep == 1 - repression 1 / rep == 2 - repression 2
@@ -6,15 +6,20 @@ function getParameters(model,rep,strain,plt,server,pre_sol)
 %plt = 0 or 1 / plt == 0 - no plots / plt == 1 - plots (data and fits)
 %server = 0 or 1 / server == 0 - not on server / server == 1 - on server
 %pre_sol = 0 or 1 / pre_sol == 0 - do not load precomputed parameter estimates / pre_sol == 1 - load precomputed parameter estimates
+%iexp = 1 or 2 / iexp == 1 - main experimetn / iexp == 2 - replicate experiment 
 
-clearvars -except model rep strain plt server pre_sol
+clearvars -except model rep strain plt server pre_sol iexp
 clc;
 
 %add path for AMICI and PESTO
 if server == 0 %adapt paths
     addpath(genpath('/Users/lea.schuh/Documents/PhD/ICB/Xenopus/PESTO-master'))
     addpath(genpath(pwd))
-    load('NonDividing')
+    if iexp == 1
+        load('NonDividing')
+    else
+        load('NonDividing2')
+    end
 else %adapt paths
     addpath(genpath('/home/icb/lea.schuh/PESTO-master'))
     addpath(genpath(pwd))
@@ -130,7 +135,11 @@ for imodel = model
                     end
                     
                 else %if load pre-computed parameters
-                    load(sprintf('./Results/scR_strain%d_rep%d_model%d',istrain,irep,imodel))
+                    if iexp == 1
+                        load(sprintf('./Results/scR_strain%d_rep%d_model%d',istrain,irep,imodel))
+                    else
+                        load(sprintf('./Results/scR2_strain%d_rep%d_model%d_truncated',istrain,irep,imodel))
+                    end
                 end
                 
                 if plt == 1
@@ -193,7 +202,11 @@ for imodel = model
             
             %save the estimated parameters
             if pre_sol == 0
-                save(sprintf('./Results/scR_strain%d_rep%d_model%d',istrain,irep,imodel),'scR')
+                if iexp == 1
+                    save(sprintf('./Results/scR_strain%d_rep%d_model%d',istrain,irep,imodel),'scR')
+                else
+                    save(sprintf('./Results/scR2_strain%d_rep%d_model%d_truncated',istrain,irep,imodel),'scR')
+                end
             end
         end
     end
