@@ -644,6 +644,8 @@ for ipar = 1:4
         r2 = (b-a).*rand(length(P1),1) + a;
     end
     
+    sum(P1>P2)/length(P1)*100
+    
     plot(1+r1,P1,'.','Color',c1,'Markersize',10)
     hold on
     plot(2+r2,P2,'.','Color',c2,'Markersize',10)
@@ -664,8 +666,8 @@ for ipar = 1:4
 end
 
 %save figure
-set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 13 4])
-print('-dpdf','./Figures/Fig3F','-painters')
+% set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 13 4])
+% print('-dpdf','./Figures/Fig3F','-painters')
 
 %% Figure 3G - GFP0 vs tdelay for WT
 
