@@ -12,33 +12,64 @@ if ~exist('./Data', 'dir')
     addpath(genpath('./Data'))
 end
 
-%define the data set - define correctly segmented positions for WT and elp6
-DataExpI5{1} = sprintf('ExpI5_pos1_Y208_WT');
-DataExpI5{2} = sprintf('ExpI5_pos2_Y208_WT');
-DataExpI5{3} = sprintf('ExpI5_pos4_Y208_WT');
-DataExpI5{4} = sprintf('ExpI5_pos5_Y208_WT');
-DataExpI5{6} = sprintf('ExpI5_pos8_Y208_WT');
-DataExpI5{7} = sprintf('ExpI5_pos9_Y208_WT');
-DataExpI5{8} = sprintf('ExpI5_pos10_Y208_WT');
-DataExpI5{9} = sprintf('ExpI5_pos11_Y208_WT');
-DataExpI5{10} = sprintf('ExpI5_pos12_Y208_WT');
-DataExpI5{11} = sprintf('ExpI5_pos13_Y208_WT');
-DataExpI5{12} = sprintf('ExpI5_pos14_Y208_WT');
-DataExpI5{13} = sprintf('ExpI5_pos15_Y208_WT');
-DataExpI5{14} = sprintf('ExpI5_pos16_Y208_WT');
+% %define the data set - define correctly segmented positions for WT and elp6
+DataExp{1} = sprintf('ExpI5_pos1_Y208_WT');
+DataExp{2} = sprintf('ExpI5_pos2_Y208_WT');
+DataExp{3} = sprintf('ExpI5_pos4_Y208_WT');
+DataExp{4} = sprintf('ExpI5_pos5_Y208_WT');
+DataExp{6} = sprintf('ExpI5_pos8_Y208_WT');
+DataExp{7} = sprintf('ExpI5_pos9_Y208_WT');
+DataExp{8} = sprintf('ExpI5_pos10_Y208_WT');
+DataExp{9} = sprintf('ExpI5_pos11_Y208_WT');
+DataExp{10} = sprintf('ExpI5_pos12_Y208_WT');
+DataExp{11} = sprintf('ExpI5_pos13_Y208_WT');
+DataExp{12} = sprintf('ExpI5_pos14_Y208_WT');
+DataExp{13} = sprintf('ExpI5_pos15_Y208_WT');
+DataExp{14} = sprintf('ExpI5_pos16_Y208_WT');
 
-DataExpI5{15} = sprintf('ExpI5_pos19_Y1474_Elp6');
-DataExpI5{16} = sprintf('ExpI5_pos20_Y1474_Elp6');
-DataExpI5{17} = sprintf('ExpI5_pos22_Y1474_Elp6');
-DataExpI5{18} = sprintf('ExpI5_pos23_Y1474_Elp6');
-DataExpI5{19} = sprintf('ExpI5_pos24_Y1474_Elp6');
-DataExpI5{20} = sprintf('ExpI5_pos25_Y1474_Elp6');
-DataExpI5{21} = sprintf('ExpI5_pos27_Y1474_Elp6');
-DataExpI5{22} = sprintf('ExpI5_pos30_Y1474_Elp6');
-DataExpI5{23} = sprintf('ExpI5_pos31_Y1474_Elp6');
-DataExpI5{24} = sprintf('ExpI5_pos32_Y1474_Elp6');
+DataExp{15} = sprintf('ExpI5_pos19_Y1474_Elp6');
+DataExp{16} = sprintf('ExpI5_pos20_Y1474_Elp6');
+DataExp{17} = sprintf('ExpI5_pos22_Y1474_Elp6');
+DataExp{18} = sprintf('ExpI5_pos23_Y1474_Elp6');
+DataExp{19} = sprintf('ExpI5_pos24_Y1474_Elp6');
+DataExp{20} = sprintf('ExpI5_pos25_Y1474_Elp6');
+DataExp{21} = sprintf('ExpI5_pos27_Y1474_Elp6');
+DataExp{22} = sprintf('ExpI5_pos30_Y1474_Elp6');
+DataExp{23} = sprintf('ExpI5_pos31_Y1474_Elp6');
+DataExp{24} = sprintf('ExpI5_pos32_Y1474_Elp6');
 
-Data = DataExpI5;
+%replicate experiment 
+
+% DataExp{1} = sprintf('ExpL1_pos1_Y208_WT');
+% DataExp{2} = sprintf('ExpL1_pos2_Y208_WT');
+% DataExp{3} = sprintf('ExpL1_pos6_Y208_WT');
+
+DataExp{25} = sprintf('ExpL1_pos9_Y1474_Elp6');
+DataExp{26} = sprintf('ExpL1_pos10_Y1474_Elp6');
+DataExp{27} = sprintf('ExpL1_pos11_Y1474_Elp6');
+DataExp{28} = sprintf('ExpL1_pos12_Y1474_Elp6');
+DataExp{29} = sprintf('ExpL1_pos13_Y1474_Elp6');
+DataExp{30} = sprintf('ExpL1_pos14_Y1474_Elp6');
+DataExp{31} = sprintf('ExpL1_pos15_Y1474_Elp6');
+DataExp{32} = sprintf('ExpL1_pos16_Y1474_Elp6');
+
+DataExp{33} = sprintf('ExpL2_pos14_Y1474_Elp6');
+DataExp{34} = sprintf('ExpL2_pos15_Y1474_Elp6');
+DataExp{35} = sprintf('ExpL2_pos16_Y1474_Elp6');
+DataExp{36} = sprintf('ExpL2_pos17_Y1474_Elp6');
+DataExp{37} = sprintf('ExpL2_pos18_Y1474_Elp6');
+DataExp{38} = sprintf('ExpL2_pos19_Y1474_Elp6');
+DataExp{39} = sprintf('ExpL2_pos20_Y1474_Elp6');
+DataExp{40} = sprintf('ExpL2_pos21_Y1474_Elp6');
+DataExp{41} = sprintf('ExpL2_pos22_Y1474_Elp6');
+DataExp{42} = sprintf('ExpL2_pos23_Y1474_Elp6');
+DataExp{43} = sprintf('ExpL2_pos24_Y1474_Elp6');
+DataExp{44} = sprintf('ExpL2_pos25_Y1474_Elp6');
+DataExp{45} = sprintf('ExpL2_pos26_Y1474_Elp6');
+DataExp{46} = sprintf('ExpL2_pos27_Y1474_Elp6');
+DataExp{47} = sprintf('ExpL2_pos28_Y1474_Elp6');
+
+Data = DataExp;
 
 Data = Data(~cellfun('isempty',Data));
 
@@ -62,7 +93,7 @@ for i = 1:length(Data)
             %extract and safe only the important information
             DF(count) = segmentation.tcells1(icell).detectionFrame;
             LF(count) = segmentation.tcells1(icell).lastFrame;
-            BF(count) = segmentation.tcells1(icell).birthFrame;
+%             BF(count) = segmentation.tcells1(icell).birthFrame;
             M(count) = segmentation.tcells1(icell).mother;
             N(count) = segmentation.tcells1(icell).N;
             
