@@ -52,17 +52,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="432.09138"
-     inkscape:cy="180.73456"
+     inkscape:zoom="1.4"
+     inkscape:cx="374.82597"
+     inkscape:cy="267.75487"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1399"
      inkscape:window-height="781"
-     inkscape:window-x="41"
-     inkscape:window-y="25"
+     inkscape:window-x="333"
+     inkscape:window-y="1113"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata22056">
@@ -5721,7 +5721,7 @@
              sodipodi:role="line"
              id="tspan56089-0-1-6-6-9-3-8-2-1-7"
              y="-32.39473"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:arial;-inkscape-font-specification:arial;fill:#000000;fill-opacity:1">p-value=5.9e-11</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:arial;-inkscape-font-specification:arial;fill:#000000;fill-opacity:1">p-value=8.1e-11</tspan></text>
       </g>
     </g>
     <g
@@ -5762,7 +5762,7 @@
              sodipodi:role="line"
              id="tspan56089-0-1-6-6-9-3-8-6-7-6-3"
              y="-32.39473"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:arial;-inkscape-font-specification:arial;fill:#000000;fill-opacity:1">p-value=1.4e-6</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:arial;-inkscape-font-specification:arial;fill:#000000;fill-opacity:1">p-value=1.8e-6</tspan></text>
       </g>
     </g>
     <g
@@ -22698,7 +22698,7 @@
              sodipodi:role="line"
              id="tspan56089-0-2-8-0-7-4"
              y="-14.807547"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;fill:#204478;fill-opacity:1">r2 (n=247)</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;fill:#204478;fill-opacity:1">r2 (n=248)</tspan></text>
       </g>
     </g>
     <g
