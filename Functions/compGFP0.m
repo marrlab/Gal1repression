@@ -6,25 +6,19 @@ clc;
 %strain1 = 1 - WT / = 2 - elp6
 %rep1 = 1 - repression 1 / = 2 - repression 2
 
-if iexp == 1
-    load('NonDividing')
-else
-    load('NonDividing2')
-end
-
 for istrain = strain1
     for irep = rep1
         
         %load estaimted parameter sets
         if iexp == 1
-            load(sprintf('scR_strain%d_rep%d_model1',istrain,irep));
+            load(sprintf('scR1_strain%d_rep%d_model1',istrain,irep));
             scR1_1 = scR;
-            load(sprintf('scR_strain%d_rep%d_model2',istrain,irep));
+            load(sprintf('scR1_strain%d_rep%d_model2',istrain,irep));
             scR1_2 = scR;
         else
-            load(sprintf('scR2_strain%d_rep%d_model1_truncated',istrain,irep));
+            load(sprintf('scR2_strain%d_rep%d_model1',istrain,irep));
             scR1_1 = scR;
-            load(sprintf('scR2_strain%d_rep%d_model2_truncated',istrain,irep));
+            load(sprintf('scR2_strain%d_rep%d_model2',istrain,irep));
             scR1_2 = scR;
         end
         
@@ -71,7 +65,7 @@ for istrain = strain1
         sol_GFP0.Pval = Pval;
         
         if iexp == 1
-            save(sprintf('./Results/sol_GFP0_%d_%d',istrain,irep),'sol_GFP0')
+            save(sprintf('./Results/sol1_GFP0_%d_%d',istrain,irep),'sol_GFP0')
         else
             save(sprintf('./Results/sol2_GFP0_%d_%d',istrain,irep),'sol_GFP0')
         end
