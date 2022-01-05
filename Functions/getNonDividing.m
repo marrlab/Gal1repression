@@ -3,9 +3,11 @@ function getNonDividing(iexp)
 clearvars -except iexp
 clc;
 
+n_total = 0;
+
 for istrain = 1:2
     
-    clearvars -except istrain NonDividing fig_count iexp
+    clearvars -except istrain NonDividing fig_count iexp n_total
     
     %get correct data sets (Wt vs elp6)
     if istrain == 1
@@ -109,7 +111,7 @@ for istrain = 1:2
         clearvars -except Data istrain i momGFPr1all momGFPr2all...
             NonDividing n_cells_r1 n_cells_r2 mom_IDr1all mom_IDr2all...
             mom_posr1all mom_posr2all daughters_IDr1all mother_count_r1all...
-            daughters_IDr2all mother_count_r2all iexp
+            daughters_IDr2all mother_count_r2all iexp n_total
         
         loadData = sprintf('S%s',Data{i});
         load(loadData);
@@ -123,6 +125,9 @@ for istrain = 1:2
         daughters_IDr2 = [];
         
         clear cell_info
+        
+        %count all cells in WT and elp6
+        n_total = n_total+length(S);
         
         %create summary matrix of all cells in that position
         for iS = 1:length(S)
@@ -314,6 +319,8 @@ for istrain = 1:2
     NonDividing{istrain}.momcountr2 = mother_count_r2all;
     NonDividing{istrain}.daughtersIDr1 = daughters_IDr1all;
     NonDividing{istrain}.daughtersIDr2 = daughters_IDr2all;
+    
+    n_total
 end
 
 if iexp == 1
