@@ -6,7 +6,7 @@ addpath(genpath(pwd))
 clearvars;
 clc;
 
-load('NonDividing')
+load('NonDividing1')
 count = 1;
 
 for strain1 = 1:2
@@ -18,9 +18,9 @@ for strain1 = 1:2
         %irep = 1 - repression 1 / = 2 - repression 2
         
         %load all estimated parameter sets for both models and repressions
-        load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,1))
+        load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,1))
         scR1_1 = scR;
-        load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,2))
+        load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,2))
         scR1_2 = scR;
         
         %extract BIC values for all single-cell trajectories for data set 1
@@ -44,7 +44,7 @@ for strain1 = 1:2
         if irep == 1
             for isample = 1:100000
                 S = datasample(1:length(ind1_2),length(ind1_2));
-                indmax = find(mean(NonDividing{istrain}.I5r1(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.I5r1(ind1_2(S),1:40))));
+                indmax = find(mean(NonDividing{istrain}.r1(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.r1(ind1_2(S),1:40))));
                 T(count,isample) = time(indmax);
             end
             
@@ -55,7 +55,7 @@ for strain1 = 1:2
         else
             for isample = 1:100000
                 S = datasample(1:length(ind1_2),length(ind1_2));
-                indmax = find(mean(NonDividing{istrain}.I5r2(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.I5r2(ind1_2(S),1:40))));
+                indmax = find(mean(NonDividing{istrain}.r2(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.r2(ind1_2(S),1:40))));
                 T(count,isample) = time(indmax);
             end
             
@@ -74,9 +74,9 @@ figure('visible','off');
 for icount = 1:size(T,1)
     
     if icount == 1
-        c = [175,198,233]./255;
+        c = [117,157,233]./255;
     else
-        c = [205,135,222]./255;
+        c = [203,133,221]./255;
     end
     
     line([mean(T(icount,:)),mean(T(icount,:))],[icount-0.4,icount+0.4],'Color',c,'Linewidth',1)
@@ -110,20 +110,20 @@ strain1 = 1;
 rep1 = 1;
 strain2 = 2;
 rep2 = 1;
-paired = false;
+paired = 0;
 
 clearvars -except rep1 strain1 rep2 strain2 paired
 clc;
 
 %load all estimated parameter sets for both models and repressions
-load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,1))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,1))
 scR1_1 = scR;
-load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,2))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,2))
 scR1_2 = scR;
 
-load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,1))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,1))
 scR2_1 = scR;
-load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,2))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,2))
 scR2_2 = scR;
 
 %extract BIC values for all single-cell trajectories for data set 1
@@ -150,30 +150,6 @@ end
 ind2_2 = find(BIC2_2-BIC2_1<-10);
 ind2_1 = find(BIC2_2-BIC2_1>=-10);
 
-%get the data sets for both experiments
-load('NonDividing')
-
-%extract relevant information
-if rep1 == 1
-    data1 = NonDividing{strain1}.I5r1;
-    momID1 = NonDividing{strain1}.I5momIDr1;
-    mompos1 = NonDividing{strain1}.I5momposr1;
-else
-    data1 = NonDividing{strain1}.I5r2;
-    momID1 = NonDividing{strain1}.I5momIDr2;
-    mompos1 = NonDividing{strain1}.I5momposr2;
-end
-
-if rep2 == 1
-    data2 = NonDividing{strain2}.I5r1;
-    momID2 = NonDividing{strain2}.I5momIDr1;
-    mompos2 = NonDividing{strain2}.I5momposr1;
-else
-    data2 = NonDividing{strain2}.I5r2;
-    momID2 = NonDividing{strain2}.I5momIDr2;
-    mompos2 = NonDividing{strain2}.I5momposr2;
-end
-
 %extract the estimated parameter sets per cell and data set
 for icell = 1:length(scR1_2)
     clear par
@@ -191,29 +167,18 @@ end
 Par1 = Par1(ind1_2,:);
 Par2 = Par2(ind2_2,:);
 
-%if comparison between cells in repressions 1 and 2
-if paired == 1
-    %extract the cell IDs and positions of cells requiring repressor model in
-    %repressions 1 and 2
-    momInfo1 = [momID1(ind1_2)',mompos1(ind1_2)'];
-    momInfo2 = [momID2(ind2_2)',mompos2(ind2_2)'];
-    [~,index_momInfo1,index_momInfo2] = intersect(momInfo1,momInfo2,'rows');
-    Par1 = Par1(index_momInfo1,:);
-    Par2 = Par2(index_momInfo2,:);
-end
-
 %define color according to strain and repression
 if strain1 == 1
     if rep1 == 1
-        c1 = [175,198,233]./255;
+        c1 = [117,157,233]./255;
     else
         c1 = [33,68,120]./255;
     end
 else
     if rep1 == 1
-        c1 = [205,135,222]./255;
+        c1 = [205,133,221]./255;
     else
-        c1 = [67,31,117]./255;
+        c1 = [66,30,115]./255;
     end
 end
 
@@ -252,7 +217,7 @@ for ipar = 1:4
     
     if paired
         for i = 1:size(P1,2)
-            line([(1+r(i)),(2+r(i))],[P1(i),P2(i)],'Color',[200,200,200]./255);
+            line([(1+r1(i)),(2+r1(i))],[P1(i),P2(i)],'Color',[200,200,200]./255);
             hold on
         end
         r2 = r1;
@@ -288,7 +253,7 @@ print('-dpdf','./Figures/Fig5B','-painters')
 clearvars;
 clc;
 
-load('NonDividing')
+load('NonDividing1')
 count = 1;
 
 for strain1 = 1:2
@@ -300,9 +265,9 @@ for strain1 = 1:2
         %irep = 1 - repression 1 / = 2 - repression 2
         
         %load all estimated parameter sets for both models and repressions
-        load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,1))
+        load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,1))
         scR1_1 = scR;
-        load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,2))
+        load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,2))
         scR1_2 = scR;
         
         %extract BIC values for all single-cell trajectories for data set 1
@@ -326,7 +291,7 @@ for strain1 = 1:2
         if irep == 1
             for isample = 1:100000
                 S = datasample(1:length(ind1_2),length(ind1_2));
-                indmax = find(mean(NonDividing{istrain}.I5r1(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.I5r1(ind1_2(S),1:40))));
+                indmax = find(mean(NonDividing{istrain}.r1(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.r1(ind1_2(S),1:40))));
                 T(count,isample) = time(indmax);
             end
             
@@ -337,7 +302,7 @@ for strain1 = 1:2
         else
             for isample = 1:100000
                 S = datasample(1:length(ind1_2),length(ind1_2));
-                indmax = find(mean(NonDividing{istrain}.I5r2(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.I5r2(ind1_2(S),1:40))));
+                indmax = find(mean(NonDividing{istrain}.r2(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.r2(ind1_2(S),1:40))));
                 T(count,isample) = time(indmax);
             end
             
@@ -358,7 +323,7 @@ for icount = 1:size(T,1)
     if icount == 1
         c = [33,68,120]./255;
     else
-        c = [67,31,117]./255;
+        c = [66,30,115]./255;
     end
     
     line([mean(T(icount,:)),mean(T(icount,:))],[icount-0.4,icount+0.4],'Color',c,'Linewidth',1)
@@ -392,20 +357,20 @@ strain1 = 1;
 rep1 = 2;
 strain2 = 2;
 rep2 = 2;
-paired = false;
+paired = 0;
 
 clearvars -except rep1 strain1 rep2 strain2 paired
 clc;
 
 %load all estimated parameter sets for both models and repressions
-load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,1))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,1))
 scR1_1 = scR;
-load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,2))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,2))
 scR1_2 = scR;
 
-load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,1))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,1))
 scR2_1 = scR;
-load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,2))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,2))
 scR2_2 = scR;
 
 %extract BIC values for all single-cell trajectories for data set 1
@@ -432,30 +397,6 @@ end
 ind2_2 = find(BIC2_2-BIC2_1<-10);
 ind2_1 = find(BIC2_2-BIC2_1>=-10);
 
-%get the data sets for both experiments
-load('NonDividing')
-
-%extract relevant information
-if rep1 == 1
-    data1 = NonDividing{strain1}.I5r1;
-    momID1 = NonDividing{strain1}.I5momIDr1;
-    mompos1 = NonDividing{strain1}.I5momposr1;
-else
-    data1 = NonDividing{strain1}.I5r2;
-    momID1 = NonDividing{strain1}.I5momIDr2;
-    mompos1 = NonDividing{strain1}.I5momposr2;
-end
-
-if rep2 == 1
-    data2 = NonDividing{strain2}.I5r1;
-    momID2 = NonDividing{strain2}.I5momIDr1;
-    mompos2 = NonDividing{strain2}.I5momposr1;
-else
-    data2 = NonDividing{strain2}.I5r2;
-    momID2 = NonDividing{strain2}.I5momIDr2;
-    mompos2 = NonDividing{strain2}.I5momposr2;
-end
-
 %extract the estimated parameter sets per cell and data set
 for icell = 1:length(scR1_2)
     clear par
@@ -473,29 +414,18 @@ end
 Par1 = Par1(ind1_2,:);
 Par2 = Par2(ind2_2,:);
 
-%if comparison between cells in repressions 1 and 2
-if paired == 1
-    %extract the cell IDs and positions of cells requiring repressor model in
-    %repressions 1 and 2
-    momInfo1 = [momID1(ind1_2)',mompos1(ind1_2)'];
-    momInfo2 = [momID2(ind2_2)',mompos2(ind2_2)'];
-    [~,index_momInfo1,index_momInfo2] = intersect(momInfo1,momInfo2,'rows');
-    Par1 = Par1(index_momInfo1,:);
-    Par2 = Par2(index_momInfo2,:);
-end
-
 %define color according to strain and repression
 if strain1 == 1
     if rep1 == 1
-        c1 = [175,198,233]./255;
+        c1 = [117,157,233]./255;
     else
         c1 = [33,68,120]./255;
     end
 else
     if rep1 == 1
-        c1 = [205,135,222]./255;
+        c1 = [203,133,221]./255;
     else
-        c1 = [67,31,117]./255;
+        c1 = [66,30,115]./255;
     end
 end
 
@@ -534,7 +464,7 @@ for ipar = 1:4
     
     if paired
         for i = 1:size(P1,2)
-            line([(1+r(i)),(2+r(i))],[P1(i),P2(i)],'Color',[200,200,200]./255);
+            line([(1+r1(i)),(2+r1(i))],[P1(i),P2(i)],'Color',[200,200,200]./255);
             hold on
         end
         r2 = r1;
