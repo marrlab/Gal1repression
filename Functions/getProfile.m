@@ -21,12 +21,12 @@ if server == 0 %adapt paths
     addpath(genpath('/Users/lea.schuh/Documents/PhD/ICB/Xenopus/PESTO-master'))
     addpath(genpath('/Users/lea.schuh/Documents/PhD/ICB/Xenopus/AMICI-master'))
     addpath(genpath(pwd))
-    load('NonDividing')
+    load('NonDividing1')
 else %adapt paths
     addpath(genpath('/home/icb/lea.schuh/AMICI-master'))
     addpath(genpath('/home/icb/lea.schuh/PESTO-master'))
     addpath(genpath(pwd))
-    load('/home/icb/lea.schuh/Gal1/NonDividing')
+    load('/home/icb/lea.schuh/Gal1/NonDividing1')
 end
 
 for imodel = model
@@ -37,9 +37,9 @@ for imodel = model
             
             if irep == 1
                 %normalize data by 1e7
-                data = NonDividing{istrain}.I5r1./1e7;
+                data = NonDividing{istrain}.r1./1e7;
             else
-                data = NonDividing{istrain}.I5r2./1e7;
+                data = NonDividing{istrain}.r2./1e7;
             end
             
             %define model parameters and upper and lower boundaries for
@@ -70,7 +70,7 @@ for imodel = model
             if irep == 1
                 Icell = 71;
             else
-                Icell = 102;
+                Icell = 103;
             end
             
             for icell = Icell
@@ -104,7 +104,7 @@ for imodel = model
                     scR(icell).sol.BIC = log(length(DA(1).y))*parameters.number-2*scR(icell).sol.MS.logPost(1);
                     
                 else %if load pre-computed parameters
-                    load(sprintf('./Results/scR_strain%d_rep%d_model%d',istrain,irep,imodel))
+                    load(sprintf('./Results/scR1_strain%d_rep%d_model%d',istrain,irep,imodel))
                 end
                 
                 parameters = getParameterProfiles(scR(icell).sol,@(xi)logLikelihood_WTElp6(xi,DA,imodel),optionsPesto);
