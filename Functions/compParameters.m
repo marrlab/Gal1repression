@@ -12,24 +12,24 @@ clc;
 
 %load all estimated parameter sets for both models and repressions
 if iexp == 1
-    load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,1))
+    load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,1))
     scR1_1 = scR;
-    load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,2))
+    load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,2))
     scR1_2 = scR;
 
-    load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,1))
+    load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,1))
     scR2_1 = scR;
-    load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,2))
+    load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,2))
     scR2_2 = scR;
 else
-    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain1,rep1,1))
+    load(sprintf('scR2_strain%d_rep%d_model%d',strain1,rep1,1))
     scR1_1 = scR;
-    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain1,rep1,2))
+    load(sprintf('scR2_strain%d_rep%d_model%d',strain1,rep1,2))
     scR1_2 = scR;
     
-    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain2,rep2,1))
+    load(sprintf('scR2_strain%d_rep%d_model%d',strain2,rep2,1))
     scR2_1 = scR;
-    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain2,rep2,2))
+    load(sprintf('scR2_strain%d_rep%d_model%d',strain2,rep2,2))
     scR2_2 = scR;
 end
 
@@ -59,57 +59,30 @@ ind2_1 = find(BIC2_2-BIC2_1>=-10);
 
 %get the data sets for both experiments
 if iexp == 1
-    load('NonDividing')
+    load('NonDividing1')
 else
+%     load('NonDividing2')
     load('NonDividing2')
 end
 
 if rep1 == 1
-    data1 = NonDividing{strain1}.I5r1;
-    momID1 = NonDividing{strain1}.I5momIDr1;
-    mompos1 = NonDividing{strain1}.I5momposr1;
-    numdaughters1 = NonDividing{strain1}.I5momcountr1;
-    IDdaughters1 = NonDividing{strain1}.I5daughtersIDr1;
-    countmom1 = 1;
-    for imom1 = 1:length(momID1)
-        M1{imom1} = IDdaughters1(countmom1:(countmom1+numdaughters1(imom1)-1));
-        countmom1 = countmom1+numdaughters1(imom1);
-    end
+    data1 = NonDividing{strain1}.r1;
+    momID1 = NonDividing{strain1}.momIDr1;
+    mompos1 = NonDividing{strain1}.momposr1;
 else
-    data1 = NonDividing{strain1}.I5r2;
-    momID1 = NonDividing{strain1}.I5momIDr2;
-    mompos1 = NonDividing{strain1}.I5momposr2;
-    numdaughters1 = NonDividing{strain1}.I5momcountr2;
-    IDdaughters1 = NonDividing{strain1}.I5daughtersIDr2;
-    countmom1 = 1;
-    for imom1 = 1:length(momID1)
-        M1{imom1} = IDdaughters1(countmom1:(countmom1+numdaughters1(imom1)-1));
-        countmom1 = countmom1+numdaughters1(imom1);
-    end
+    data1 = NonDividing{strain1}.r2;
+    momID1 = NonDividing{strain1}.momIDr2;
+    mompos1 = NonDividing{strain1}.momposr2;
 end
 
 if rep2 == 1
-    data2 = NonDividing{strain2}.I5r1;
-    momID2 = NonDividing{strain2}.I5momIDr1;
-    mompos2 = NonDividing{strain2}.I5momposr1;
-    numdaughters2 = NonDividing{strain1}.I5momcountr1;
-    IDdaughters2 = NonDividing{strain1}.I5daughtersIDr1;
-    countmom2 = 1;
-    for imom2 = 1:length(momID2)
-        M2{imom2} = IDdaughters2(countmom2:(countmom2+numdaughters2(imom2)-1));
-        countmom2 = countmom2+numdaughters2(imom2);
-    end
+    data2 = NonDividing{strain2}.r1;
+    momID2 = NonDividing{strain2}.momIDr1;
+    mompos2 = NonDividing{strain2}.momposr1;
 else
-    data2 = NonDividing{strain2}.I5r2;
-    momID2 = NonDividing{strain2}.I5momIDr2;
-    mompos2 = NonDividing{strain2}.I5momposr2;
-    numdaughters2 = NonDividing{strain1}.I5momcountr2;
-    IDdaughters2 = NonDividing{strain1}.I5daughtersIDr2;
-    countmom2 = 1;
-    for imom2 = 1:length(momID2)
-        M2{imom2} = IDdaughters2(countmom2:(countmom2+numdaughters2(imom2)-1));
-        countmom2 = countmom2+numdaughters2(imom2);
-    end
+    data2 = NonDividing{strain2}.r2;
+    momID2 = NonDividing{strain2}.momIDr2;
+    mompos2 = NonDividing{strain2}.momposr2;
 end
 
 %extract the estimated parameter sets per cell and data set
@@ -125,19 +98,30 @@ for icell = 1:length(scR2_2)
     Par2(icell,:) = par';
 end
 
-%reduce parameter sets to the cells requiring the repressor model
-Par1 = Par1(ind1_2,:);
-Par2 = Par2(ind2_2,:);
-
 %if comparison between cells in repressions 1 and 2
 if paired == 1
+    
+    %reduce parameter sets to the cells requiring the repressor model
+    Par1_1 = Par1(ind1_2,:);
+    Par2_1 = Par2(ind2_2,:);
+
     %extract the cell IDs and positions of cells requiring repressor model in
     %repressions 1 and 2
-    momInfo1 = [momID1(ind1_2)',mompos1(ind1_2)'];
+    momInfo1 = [momID1(ind1_2)',mompos1(ind1_2)',];
     momInfo2 = [momID2(ind2_2)',mompos2(ind2_2)'];
+    
     [~,index_momInfo1,index_momInfo2] = intersect(momInfo1,momInfo2,'rows');
-    Par1 = Par1(index_momInfo1,:);
-    Par2 = Par2(index_momInfo2,:);
+    
+    Par1_1 = Par1_1(index_momInfo1,:);
+    Par2_1 = Par2_1(index_momInfo2,:);
+
+    Par1 = [Par1_1];
+    Par2 = [Par2_1];
+      
+else
+    %reduce parameter sets to the cells requiring the repressor model
+    Par1 = Par1(ind1_2,:);
+    Par2 = Par2(ind2_2,:);
 end
 
 %for each of the estimated parameters GFP0, delay, rprod and rdeg do
@@ -149,6 +133,8 @@ for ipar = 1:4
     P1 = Par1(:,ipar)';
     P2 = Par2(:,ipar)';
     index = [ones(length(P1),1);2*ones(length(P2),1)];
+    
+%     sum(P1-P2<0)/length(P1)*100
     
     if paired == 0
         [p_mediantest,tab,chi2] = mediantest(P1,P2);
@@ -167,7 +153,7 @@ sol_Par.Pval = Pval;
 sol_Par.Median = M;
 
 if iexp == 1
-    save(sprintf('./Results/sol_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
+    save(sprintf('./Results/sol1_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
 else
     save(sprintf('./Results/sol2_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
 end
