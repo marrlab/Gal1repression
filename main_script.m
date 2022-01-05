@@ -5,13 +5,21 @@ addpath(genpath(pwd))
 
 %% Preprocessing
 
+%reformat the output files of Cell ACDC (.csv) to match the output from
+%PhyloCell 
+getReformatting;
+
 %extract single cell information from segmentation files for WT and elp6
 %!!here: manually add Phylocell path  in script getPreprocessing.m line 6!! 
 getPreprocessing;
 
 %compute non-dividing cells for repression periods for WT and elp6
+% getNonDividing(iexp)
 %iexp = 1 - main experiment / iexp = 2 - replicate experiment
-getNonDividing(iexp)
+%main experiment
+getNonDividing(1)
+%replicate experiment
+getNonDividing(2)
 
 %% Parameter estimation - parameter inference of non-repressor and repressor models for WT and elp6 and repressions 1 and 2
 
@@ -158,12 +166,6 @@ compParameters(1,1,2,1,1,2);
 %repression 1 vs 2 for elp6, paired, replicate experiment
 compParameters(1,2,2,2,1,2);
 
-%WT vs elp6 for repression 1, not paired, replicate experiment
-compParameters(1,1,1,2,0,2);
-
-%WT vs elp6 for repression 2, not paired, replicate experiment
-compParameters(2,1,2,2,0,2);
-
 %% Statistical Analysis - comparison of GFP0 and tdelay
 
 %comp_GFP0_tdelay(rep1,strain1,rep2,strain2,iexp)
@@ -178,24 +180,6 @@ compParameters(2,1,2,2,0,2);
 %repression 1 vs 2 for WT, main experiment
 comp_GFP0_tdelay(1,1,2,1,1)
 
-%repression 1 vs 2 for elp6, main experiment
-comp_GFP0_tdelay(1,2,2,2,1)
-
-%WT vs elp6 for repression 1, main experiment
-comp_GFP0_tdelay(1,1,1,2,1)
-
-%WT vs elp6 for repression 2, main experiment
-comp_GFP0_tdelay(2,1,2,2,1)
-
 %replicate experiment
 %repression 1 vs 2 for WT, replicate experiment
 comp_GFP0_tdelay(1,1,2,1,2)
-
-%repression 1 vs 2 for elp6, replicate experiment
-comp_GFP0_tdelay(1,2,2,2,2)
-
-%WT vs elp6 for repression 1, replicate experiment
-comp_GFP0_tdelay(1,1,1,2,2)
-
-%WT vs elp6 for repression 2, replicate experiment
-comp_GFP0_tdelay(2,1,2,2,2)
