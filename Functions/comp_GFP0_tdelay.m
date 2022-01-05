@@ -6,32 +6,29 @@ function comp_GFP0_tdelay(rep1,strain1,rep2,strain2,iexp)
 %strain2 = 1 - WT / = 2 - elp6
 %iexp = 1 - main experiment / = 2 - replicate experiment
 
-%not paired as we look at all cells for regression fit
-paired = 0;
-
 clearvars -except rep1 strain1 rep2 strain2 paired iexp
 clc;
 
 %load all estimated parameter sets for both models and repressions
 if iexp == 1
-    load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,1))
+    load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,1))
     scR1_1 = scR;
-    load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,2))
+    load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,2))
     scR1_2 = scR;
     
-    load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,1))
+    load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,1))
     scR2_1 = scR;
-    load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,2))
+    load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,2))
     scR2_2 = scR;
 else
-    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain1,rep1,1))
+    load(sprintf('scR2_strain%d_rep%d_model%d',strain1,rep1,1))
     scR1_1 = scR;
-    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain1,rep1,2))
+    load(sprintf('scR2_strain%d_rep%d_model%d',strain1,rep1,2))
     scR1_2 = scR;
     
-    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain2,rep2,1))
+    load(sprintf('scR2_strain%d_rep%d_model%d',strain2,rep2,1))
     scR2_1 = scR;
-    load(sprintf('scR2_strain%d_rep%d_model%d_truncated',strain2,rep2,2))
+    load(sprintf('scR2_strain%d_rep%d_model%d',strain2,rep2,2))
     scR2_2 = scR;
 end
 
@@ -59,61 +56,6 @@ end
 ind2_2 = find(BIC2_2-BIC2_1<-10);
 ind2_1 = find(BIC2_2-BIC2_1>=-10);
 
-%get the data sets for both experiments
-if iexp == 1
-    load('NonDividing')
-else
-    load('NonDividing2')
-end
-
-if rep1 == 1
-    data1 = NonDividing{strain1}.I5r1;
-    momID1 = NonDividing{strain1}.I5momIDr1;
-    mompos1 = NonDividing{strain1}.I5momposr1;
-    numdaughters1 = NonDividing{strain1}.I5momcountr1;
-    IDdaughters1 = NonDividing{strain1}.I5daughtersIDr1;
-    countmom1 = 1;
-    for imom1 = 1:length(momID1)
-        M1{imom1} = IDdaughters1(countmom1:(countmom1+numdaughters1(imom1)-1));
-        countmom1 = countmom1+numdaughters1(imom1);
-    end
-else
-    data1 = NonDividing{strain1}.I5r2;
-    momID1 = NonDividing{strain1}.I5momIDr2;
-    mompos1 = NonDividing{strain1}.I5momposr2;
-    numdaughters1 = NonDividing{strain1}.I5momcountr2;
-    IDdaughters1 = NonDividing{strain1}.I5daughtersIDr2;
-    countmom1 = 1;
-    for imom1 = 1:length(momID1)
-        M1{imom1} = IDdaughters1(countmom1:(countmom1+numdaughters1(imom1)-1));
-        countmom1 = countmom1+numdaughters1(imom1);
-    end
-end
-
-if rep2 == 1
-    data2 = NonDividing{strain2}.I5r1;
-    momID2 = NonDividing{strain2}.I5momIDr1;
-    mompos2 = NonDividing{strain2}.I5momposr1;
-    numdaughters2 = NonDividing{strain1}.I5momcountr1;
-    IDdaughters2 = NonDividing{strain1}.I5daughtersIDr1;
-    countmom2 = 1;
-    for imom2 = 1:length(momID2)
-        M2{imom2} = IDdaughters2(countmom2:(countmom2+numdaughters2(imom2)-1));
-        countmom2 = countmom2+numdaughters2(imom2);
-    end
-else
-    data2 = NonDividing{strain2}.I5r2;
-    momID2 = NonDividing{strain2}.I5momIDr2;
-    mompos2 = NonDividing{strain2}.I5momposr2;
-    numdaughters2 = NonDividing{strain1}.I5momcountr2;
-    IDdaughters2 = NonDividing{strain1}.I5daughtersIDr2;
-    countmom2 = 1;
-    for imom2 = 1:length(momID2)
-        M2{imom2} = IDdaughters2(countmom2:(countmom2+numdaughters2(imom2)-1));
-        countmom2 = countmom2+numdaughters2(imom2);
-    end
-end
-
 %extract the estimated parameter sets per cell and data set
 for icell = 1:length(scR1_2)
     clear par
@@ -131,72 +73,69 @@ end
 Par1 = Par1(ind1_2,:);
 Par2 = Par2(ind2_2,:);
 
-%if comparison between cells in repressions 1 and 2
-if paired == 1
-    %extract the cell IDs and positions of cells requiring repressor model in
-    %repressions 1 and 2
-    momInfo1 = [momID1(ind1_2)',mompos1(ind1_2)'];
-    momInfo2 = [momID2(ind2_2)',mompos2(ind2_2)'];
-    [~,index_momInfo1,index_momInfo2] = intersect(momInfo1,momInfo2,'rows');
-    Par1 = Par1(index_momInfo1,:);
-    Par2 = Par2(index_momInfo2,:);
-end
+%split into low (<3) and high (>3) inducing cells
+Par1a = Par1(Par1(:,1)<3,:);
+Par2a = Par2(Par2(:,1)<3,:);
 
-if rep1 < rep2
-    %get linear regression fits for data set 1
-    c1 = polyfit(Par1(:,1),Par1(:,2),1);
-    % Display evaluated equation y = m*x + b
-    disp(['Equation is y = ' num2str(c1(1)) '*x + ' num2str(c1(2))])
-    
-    %get linear regression fits for data set 2
-    c2 = polyfit(Par2(:,1),Par2(:,2),1);
-    % Display evaluated equation y = m*x + b
-    disp(['Equation is y = ' num2str(c2(1)) '*x + ' num2str(c2(2))])
-    
-    %test whether repression slope of data set 1 == 0
-    X=[Par1(:,1) ones(size(Par1(:,1),1),1)];
-    y=Par1(:,2);
-    [b,bint,r,rint,stats]=regress(y,X);
-    stats1 = stats(3);
-    
-    %test whether repression slope of data set 2 == 0
-    X=[Par2(:,1) ones(size(Par2(:,1),1),1)];
-    y=Par2(:,2);
-    [b,bint,r,rint,stats]=regress(y,X);
-    stats2 = stats(3);
-    
-    sol_GFP0_tdelay.c1 = c1;
-    sol_GFP0_tdelay.c2 = c2;
-    sol_GFP0_tdelay.stats1 = stats1;
-    sol_GFP0_tdelay.stats2 = stats2;
-    
-end
+Par1b = Par1(Par1(:,1)>3,:);
+Par2b = Par2(Par2(:,1)>3,:);
 
-if rep1 == rep2
-    
-    %get linear regression fits for data set 1
-    c1 = polyfit(Par1(:,1),Par1(:,2),1);
-    % Display evaluated equation y = m*x + b
-    disp(['Equation is y = ' num2str(c1(1)) '*x + ' num2str(c1(2))])
-    
-    %get linear regression fits for data set 2
-    c2 = polyfit(Par2(:,1),Par2(:,2),1);
-    % Display evaluated equation y = m*x + b
-    disp(['Equation is y = ' num2str(c2(1)) '*x + ' num2str(c2(2))])
-    
-    C = table([Par2(:,2);Par1(:,2)],[Par2(:,1);Par1(:,1)],[zeros(length(Par2(:,1)),1);...
-        ones(length(Par1(:,1)),1)],'VariableNames',{'t','GFP0','rep'});
-    C.rep = categorical(C.rep);
-    
-    fit = fitlm(C,'t~GFP0*rep');
-    sol_GFP0_tdelay.c1 = c1;
-    sol_GFP0_tdelay.c2 = c2;
-    sol_GFP0_tdelay.fit = fit;
-    
-end
+%get linear regression fits for data set 1 < 3
+c1 = polyfit(Par1a(:,1),Par1a(:,2),1);
+% Display evaluated equation y = m*x + b
+disp(['Equation is y = ' num2str(c1(1)) '*x + ' num2str(c1(2))])
+
+%get linear regression fits for data set 2 < 3
+c2 = polyfit(Par2a(:,1),Par2a(:,2),1);
+% Display evaluated equation y = m*x + b
+disp(['Equation is y = ' num2str(c2(1)) '*x + ' num2str(c2(2))])
+
+%test whether repression slope of data set 1 == 0
+X=[Par1a(:,1) ones(size(Par1a(:,1),1),1)];
+y=Par1a(:,2);
+[b,bint,r,rint,stats]=regress(y,X);
+stats1 = stats(3);
+
+%test whether repression slope of data set 2 == 0
+X=[Par2a(:,1) ones(size(Par2a(:,1),1),1)];
+y=Par2a(:,2);
+[b,bint,r,rint,stats]=regress(y,X);
+stats2 = stats(3);
+
+sol_GFP0_tdelay.c1a = c1;
+sol_GFP0_tdelay.c2a = c2;
+sol_GFP0_tdelay.stats1a = stats1;
+sol_GFP0_tdelay.stats2a = stats2;
+
+%get linear regression fits for data set 1 > 3
+c1 = polyfit(Par1b(:,1),Par1b(:,2),1);
+% Display evaluated equation y = m*x + b
+disp(['Equation is y = ' num2str(c1(1)) '*x + ' num2str(c1(2))])
+
+%get linear regression fits for data set 2 > 3
+c2 = polyfit(Par2b(:,1),Par2b(:,2),1);
+% Display evaluated equation y = m*x + b
+disp(['Equation is y = ' num2str(c2(1)) '*x + ' num2str(c2(2))])
+
+%test whether repression slope of data set 1 == 0
+X=[Par1b(:,1) ones(size(Par1b(:,1),1),1)];
+y=Par1b(:,2);
+[b,bint,r,rint,stats]=regress(y,X);
+stats1 = stats(3);
+
+%test whether repression slope of data set 2 == 0
+X=[Par2b(:,1) ones(size(Par2b(:,1),1),1)];
+y=Par2b(:,2);
+[b,bint,r,rint,stats]=regress(y,X);
+stats2 = stats(3);
+
+sol_GFP0_tdelay.c1b = c1;
+sol_GFP0_tdelay.c2b = c2;
+sol_GFP0_tdelay.stats1b = stats1;
+sol_GFP0_tdelay.stats2b = stats2;
 
 if iexp == 1
-    save(sprintf('./Results/sol_GFP0_tdelay_%d_%d_%d_%d',rep1,strain1,rep2,strain2),'sol_GFP0_tdelay')
+    save(sprintf('./Results/sol1_GFP0_tdelay_%d_%d_%d_%d',rep1,strain1,rep2,strain2),'sol_GFP0_tdelay')
 else
     save(sprintf('./Results/sol2_GFP0_tdelay_%d_%d_%d_%d',rep1,strain1,rep2,strain2),'sol_GFP0_tdelay')
 end
