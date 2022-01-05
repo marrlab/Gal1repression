@@ -7,13 +7,11 @@ clearvars;
 clc;
 
 %load data of computed non-dividing cells
-load('NonDividing')
-% figure('visible','off');
+load('NonDividing1')
 figure('visible','off');
 
 %istrain = 1 - WT / = 2 - elp6
 %irep = 1 - repression 1 / = 2 - repression 2
-
 istrain = 1;
 
 for  irep = 1:2
@@ -26,9 +24,9 @@ for  irep = 1:2
     end
     
     %load estimated parameter sets
-    load(sprintf('scR_strain%d_rep%d_model1',istrain,irep));
+    load(sprintf('scR1_strain%d_rep%d_model1',istrain,irep));
     scR1_1 = scR;
-    load(sprintf('scR_strain%d_rep%d_model2',istrain,irep));
+    load(sprintf('scR1_strain%d_rep%d_model2',istrain,irep));
     scR1_2 = scR;
     
     %for each total GFP trace determine whether the repressor model is
@@ -42,16 +40,10 @@ for  irep = 1:2
     ind1_2 = find(BIC1_2-BIC1_1<-10); %model 2 best
     ind1_1 = find(BIC1_2-BIC1_1>=-10);%model 1 best
     
-    %     if irep == 1
-    %         ind_rand = randsample(1:length(NonDividing{istrain}.I5r1),1);
-    %     else
-    %         ind_rand = randsample(1:length(NonDividing{istrain}.I5r2),1);
-    %     end
-    
     if irep == 1
         ind_rand = 71;
     else
-        ind_rand = 102;
+        ind_rand = 103;
     end
     
     display(sprintf('BIC: non-repressor model: %d', BIC1_1(ind_rand)))
@@ -70,10 +62,10 @@ for  irep = 1:2
         %if the total GFP trace is better explained by the repressor
         %model do
         if irep == 1
-            plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.I5r1(ind_rand(icell),1:40)./1e7,':','Color','k')
+            plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.r1(ind_rand(icell),1:40)./1e7,':','Color','k')
             hold on
         else
-            plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.I5r2(ind_rand(icell),1:40)./1e7,':','Color','k')
+            plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.r2(ind_rand(icell),1:40)./1e7,':','Color','k')
             hold on
         end
         
@@ -151,131 +143,131 @@ getProfile(2)
 %istrain = 1 - WT / = 2 - elp6
 %irep = 1 - repression 1 / = 2 - repression 2
 
-for istrain = 1
-    for  irep = 1:2
+istrain = 1;
+
+for  irep = 1:2
+    
+    clearvars -except istrain irep
+    clc;
+    
+    %load data of computed non-dividing cells
+    load('NonDividing1')
+    figure('visible','off');
+    
+    %define color according to strain and repression
+    if irep == 1
+        c = [117,157,233]./255;
+    else
+        c = [33,68,120]./255;
+    end
+    
+    %load estimated parameter sets
+    load(sprintf('scR1_strain%d_rep%d_model1',istrain,irep));
+    scR1_1 = scR;
+    load(sprintf('scR1_strain%d_rep%d_model2',istrain,irep));
+    scR1_2 = scR;
+    
+    %for each total GFP trace determine whether the repressor model is
+    %required to fit the data (according to the BIC)
+    for i = 1:size(scR1_1,2)
+        BIC1_1(i) = scR1_1(i).sol.BIC;
+    end
+    for i = 1:size(scR1_2,2)
+        BIC1_2(i) = scR1_2(i).sol.BIC;
+    end
+    ind1_2 = find(BIC1_2-BIC1_1<-10); %model 2 best
+    ind1_1 = find(BIC1_2-BIC1_1>=-10);%model 1 best
+    
+    %determine 10 randomly sampled cells which will be plotted
+    if irep == 1
+        ind_rand = randsample(1:length(NonDividing{istrain}.r1),10);
+    else
+        ind_rand = randsample(1:length(NonDividing{istrain}.r2),10);
+    end
+    
+    %for each of the 10 randomly chosen cells, plot the total gFP trace
+    %and the fit
+    for icell = 1:10
         
-        clearvars -except istrain irep
-        clc;
-        
-        %load data of computed non-dividing cells
-        load('NonDividing')
-        figure('visible','off');
-        
-        %define color according to strain and repression
-        if irep == 1
-            c = [117,157,233]./255;
-        else
-            c = [33,68,120]./255;
-        end
-        
-        %load estimated parameter sets
-        load(sprintf('scR_strain%d_rep%d_model1',istrain,irep));
-        scR1_1 = scR;
-        load(sprintf('scR_strain%d_rep%d_model2',istrain,irep));
-        scR1_2 = scR;
-        
-        %for each total GFP trace determine whether the repressor model is
-        %required to fit the data (according to the BIC)
-        for i = 1:size(scR1_1,2)
-            BIC1_1(i) = scR1_1(i).sol.BIC;
-        end
-        for i = 1:size(scR1_2,2)
-            BIC1_2(i) = scR1_2(i).sol.BIC;
-        end
-        ind1_2 = find(BIC1_2-BIC1_1<-10); %model 2 best
-        ind1_1 = find(BIC1_2-BIC1_1>=-10);%model 1 best
-        
-        %determine 10 randomly sampled cells which will be plotted
-        if irep == 1
-            ind_rand = randsample(1:length(NonDividing{istrain}.I5r1),10);
-        else
-            ind_rand = randsample(1:length(NonDividing{istrain}.I5r2),10);
-        end
-        
-        %for each of the 10 randomly chosen cells, plot the total gFP trace
-        %and the fit
-        for icell = 1:10
+        %if the total GFP trace is better explained by the repressor
+        %model do
+        if ismember(ind_rand(icell),ind1_2)
             
-            %if the total GFP trace is better explained by the repressor
-            %model do
-            if ismember(ind_rand(icell),ind1_2)
-                
-                if irep == 1
-                    plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.I5r1(ind_rand(icell),1:40)./1e7,':','Color',c)
-                    hold on
-                else
-                    plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.I5r2(ind_rand(icell),1:40)./1e7,':','Color',c)
-                    hold on
-                end
-                
-                par = 10.^(scR1_2(ind_rand(icell)).sol.MS.par(:,1));
-                indA = 1:5;
-                P01 = par(indA(1));
-                t_rep1 = par(indA(2));
-                b1 = par(indA(3));
-                c1 = par(indA(4));
-                sigmayA = par(indA(5))*ones(40,1);
-                
-                %WT simulation
-                count = 1;
-                for t = (1-1)*3/60:3/60:(40-1)*3/60
-                    if t<t_rep1
-                        f1(count) = b1/(c1)+(P01-b1/(c1))*exp(-c1*t);
-                    else
-                        P0_init = b1/(c1)+(P01-b1/(c1))*exp(-c1*t_rep1);
-                        f1(count) = P0_init*exp(-c1*(t-t_rep1));
-                    end
-                    count = count+1;
-                end
-                f1 = f1';
-                plot((1-1)*3/60:3/60:(40-1)*3/60,f1,'-','Color','k');
-                
-                %if the total GFP trace is better explained by the non-repressor
-                %model do
+            if irep == 1
+                plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.r1(ind_rand(icell),1:40)./1e7,':','Color',c)
+                hold on
             else
-                
-                if irep == 1
-                    plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.I5r1(ind_rand(icell),1:40)./1e7,':','Color',c)
-                    hold on
-                else
-                    plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.I5r2(ind_rand(icell),1:40)./1e7,':','Color',c)
-                    hold on
-                end
-                
-                par = 10.^(scR1_1(ind_rand(icell)).sol.MS.par(:,1));
-                indA = 1:4;
-                P01 = par(indA(1));
-                b1 = par(indA(2));
-                c1 = par(indA(3));
-                sigmayA = par(indA(4))*ones(40,1);
-                
-                %WT simulation
-                count = 1;
-                for t = (1-1)*3/60:3/60:(40-1)*3/60
-                    f1(count) = b1/(c1)+(P01-b1/(c1))*exp(-c1*t);
-                    count = count+1;
-                end
-                f1 = f1';
-                
-                plot((1-1)*3/60:3/60:(40-1)*3/60,f1,'-','Color','r');
-                
+                plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.r2(ind_rand(icell),1:40)./1e7,':','Color',c)
+                hold on
             end
-        end
-        
-        ylabel('GFP intensity')
-        xlabel('time (h)')
-        xticks([0,1,2])
-        box off
-        set(gca,'linewidth',1.02)
-        set(gca,'FontSize',11)
-        set(gca,'FontName','Arial')
-        xlim([0,2])
-        set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
-        if irep == 1
-            print('-dpdf','./Figures/Fig3Cleft','-painters')
+            
+            par = 10.^(scR1_2(ind_rand(icell)).sol.MS.par(:,1));
+            indA = 1:5;
+            P01 = par(indA(1));
+            t_rep1 = par(indA(2));
+            b1 = par(indA(3));
+            c1 = par(indA(4));
+            sigmayA = par(indA(5))*ones(40,1);
+            
+            %WT simulation
+            count = 1;
+            for t = (1-1)*3/60:3/60:(40-1)*3/60
+                if t<t_rep1
+                    f1(count) = b1/(c1)+(P01-b1/(c1))*exp(-c1*t);
+                else
+                    P0_init = b1/(c1)+(P01-b1/(c1))*exp(-c1*t_rep1);
+                    f1(count) = P0_init*exp(-c1*(t-t_rep1));
+                end
+                count = count+1;
+            end
+            f1 = f1';
+            plot((1-1)*3/60:3/60:(40-1)*3/60,f1,'-','Color','k');
+            
+            %if the total GFP trace is better explained by the non-repressor
+            %model do
         else
-            print('-dpdf','./Figures/Fig3Cright','-painters')
+            
+            if irep == 1
+                plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.r1(ind_rand(icell),1:40)./1e7,':','Color',c)
+                hold on
+            else
+                plot((1-1)*3/60:3/60:(40-1)*3/60,NonDividing{istrain}.r2(ind_rand(icell),1:40)./1e7,':','Color',c)
+                hold on
+            end
+            
+            par = 10.^(scR1_1(ind_rand(icell)).sol.MS.par(:,1));
+            indA = 1:4;
+            P01 = par(indA(1));
+            b1 = par(indA(2));
+            c1 = par(indA(3));
+            sigmayA = par(indA(4))*ones(40,1);
+            
+            %WT simulation
+            count = 1;
+            for t = (1-1)*3/60:3/60:(40-1)*3/60
+                f1(count) = b1/(c1)+(P01-b1/(c1))*exp(-c1*t);
+                count = count+1;
+            end
+            f1 = f1';
+            
+            plot((1-1)*3/60:3/60:(40-1)*3/60,f1,'-','Color','r');
+            
         end
+    end
+    
+    ylabel('GFP intensity')
+    xlabel('time (h)')
+    xticks([0,1,2])
+    box off
+    set(gca,'linewidth',1.02)
+    set(gca,'FontSize',11)
+    set(gca,'FontName','Arial')
+    xlim([0,2])
+    set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
+    if irep == 1
+        print('-dpdf','./Figures/Fig3Cleft','-painters')
+    else
+        print('-dpdf','./Figures/Fig3Cright','-painters')
     end
 end
 
@@ -285,103 +277,102 @@ end
 %irep = 1 - repression 1 / = 2 - repression 2
 clc;
 
-for istrain = 1
-    for irep = 1:2
+istrain = 1;
+
+for irep = 1:2
+    
+    clearvars -except istrain irep
+    %         clc;
+    
+    %load total GFP traces of computed non-dividing cells
+    figure('visible','off');
+    
+    %load estimated parameters
+    load(sprintf('scR1_strain%d_rep%d_model1',istrain,irep));
+    scR1_1 = scR;
+    load(sprintf('scR1_strain%d_rep%d_model2',istrain,irep));
+    scR1_2 = scR;
+    
+    %determine for each total GFP trace whether the repressor model is
+    %required to fit the data (according to the BIC)
+    for i = 1:size(scR1_1,2)
+        BIC1_1(i) = scR1_1(i).sol.BIC;
+    end
+    for i = 1:size(scR1_2,2)
+        BIC1_2(i) = scR1_2(i).sol.BIC;
+    end
+    ind1_2 = find(BIC1_2-BIC1_1<-10); %model 2 best
+    ind1_1 = find(BIC1_2-BIC1_1>=-10);%model 1 best
+    
+    %extract all estimated parameter sets per total GFP trace
+    for icell = 1:length(scR1_1)
+        clear par
+        par = 10.^(scR1_1(icell).sol.MS.par(:,1));
+        Par1(icell,:) = par';
+    end
+    
+    for icell = 1:length(scR1_2)
+        clear par
+        par = 10.^(scR1_2(icell).sol.MS.par(:,1));
+        Par2(icell,:) = par';
+    end
+    
+    for ipar = 1
         
-        clearvars -except istrain irep
-        %         clc;
+        %only consider total GFP traces which reuiqre the repressor
+        %model
+        P1 = Par1(ind1_1,ipar)';
+        P2 = Par1(ind1_2,ipar)';
         
-        %load total GFP traces of computed non-dividing cells
-        load('NonDividing')
-        figure('visible','off');
+        %show the number of cells better fitted by the non-repressor
+        %model (1) and repressor model (2)
+        display(sprintf('%d WT cells of repression r%d are better fitted by a non-repressor model',length(P1),irep))
+        display(sprintf('%d WT cells of repression r%d are better fitted by a repressor model',length(P2),irep))
         
-        %load estimated parameters
-        load(sprintf('scR_strain%d_rep%d_model1',istrain,irep));
-        scR1_1 = scR;
-        load(sprintf('scR_strain%d_rep%d_model2',istrain,irep));
-        scR1_2 = scR;
+        %show fractions of cells better fitted by the non-repressor
+        %model (1) and repressor model (2)
+        display(sprintf('%d percent of WT cells repression r%d are better fitted by a non-repressor model',length(P1)/(length(P1)+length(P2))*100,irep))
+        display(sprintf('%d percent of WT cells of WT repression r%d are better fitted by a repressor model',length(P2)/(length(P1)+length(P2))*100,irep))
         
-        %determine for each total GFP trace whether the repressor model is
-        %required to fit the data (according to the BIC)
-        for i = 1:size(scR1_1,2)
-            BIC1_1(i) = scR1_1(i).sol.BIC;
-        end
-        for i = 1:size(scR1_2,2)
-            BIC1_2(i) = scR1_2(i).sol.BIC;
-        end
-        ind1_2 = find(BIC1_2-BIC1_1<-10); %model 2 best
-        ind1_1 = find(BIC1_2-BIC1_1>=-10);%model 1 best
+        index = [ones(length(P1),1);2*ones(length(P2),1)];
         
-        %extract all estimated parameter sets per total GFP trace
-        for icell = 1:length(scR1_1)
-            clear par
-            par = 10.^(scR1_1(icell).sol.MS.par(:,1));
-            Par1(icell,:) = par';
-        end
+        %Mood's median test
+        [p_mediantest,tab,chi2] = mediantest(P1,P2);
+        Pval_mediantest(ipar) = p_mediantest;
         
-        for icell = 1:length(scR1_2)
-            clear par
-            par = 10.^(scR1_2(icell).sol.MS.par(:,1));
-            Par2(icell,:) = par';
-        end
+        %plot with jitter
+        a = -0.2;
+        b = 0.2;
+        r1 = (b-a).*rand(length(P1),1) + a;
+        plot(1+r1,P1,'.','Color','r','Markersize',10)
+        hold on
         
-        for ipar = 1
-            
-            %only consider total GFP traces which reuiqre the repressor
-            %model
-            P1 = Par1(ind1_1,ipar)';
-            P2 = Par1(ind1_2,ipar)';
-            
-            %show the number of cells better fitted by the non-repressor
-            %model (1) and repressor model (2)
-            display(sprintf('%d WT cells of repression r%d are better fitted by a non-repressor model',length(P1),irep))
-            display(sprintf('%d WT cells of repression r%d are better fitted by a repressor model',length(P2),irep))
-            
-            %show fractions of cells better fitted by the non-repressor
-            %model (1) and repressor model (2)
-            display(sprintf('%d percent of WT cells repression r%d are better fitted by a non-repressor model',length(P1)/(length(P1)+length(P2))*100,irep))
-            display(sprintf('%d percent of WT cells of WT repression r%d are better fitted by a repressor model',length(P2)/(length(P1)+length(P2))*100,irep))
-            
-            index = [ones(length(P1),1);2*ones(length(P2),1)];
-            
-            %Mood's median test
-            [p_mediantest,tab,chi2] = mediantest(P1,P2);
-            Pval_mediantest(ipar) = p_mediantest;
-            
-            %plot with jitter
-            a = -0.2;
-            b = 0.2;
-            r1 = (b-a).*rand(length(P1),1) + a;
-            plot(1+r1,P1,'.','Color','r','Markersize',10)
-            hold on
-            
-            r2 = (b-a).*rand(length(P2),1) + a;
-            plot(2+r2,P2,'.','Color','k','Markersize',10)
-            hold on
-            
-            line([0.6,1.4],[median(P1),median(P1)],'Color','k','Linewidth',2)
-            hold on
-            line([1.6,2.4],[median(P2),median(P2)],'Color','k','Linewidth',2)
-            
-            hold on
-            xlim([0,3])
-            set(gca,'FontSize',10)
-            ylim([0 inf])
-            box off
-            set(gca,'linewidth',1.02)
-            set(gca,'FontSize',11)
-            set(gca,'FontName','Arial')
-            ylabel('GFP intensity')
-            xlabel('model')
-        end
+        r2 = (b-a).*rand(length(P2),1) + a;
+        plot(2+r2,P2,'.','Color','k','Markersize',10)
+        hold on
         
-        %save figure
-        set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
-        if irep == 1
-            print('-dpdf','./Figures/Fig3Dleft','-painters')
-        else
-            print('-dpdf','./Figures/Fig3Dright','-painters')
-        end
+        line([0.6,1.4],[median(P1),median(P1)],'Color','k','Linewidth',2)
+        hold on
+        line([1.6,2.4],[median(P2),median(P2)],'Color','k','Linewidth',2)
+        
+        hold on
+        xlim([0,3])
+        set(gca,'FontSize',10)
+        ylim([0 inf])
+        box off
+        set(gca,'linewidth',1.02)
+        set(gca,'FontSize',11)
+        set(gca,'FontName','Arial')
+        ylabel('GFP intensity')
+        xlabel('model')
+    end
+    
+    %save figure
+    set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
+    if irep == 1
+        print('-dpdf','./Figures/Fig3Dleft','-painters')
+    else
+        print('-dpdf','./Figures/Fig3Dright','-painters')
     end
 end
 
@@ -390,68 +381,67 @@ end
 clearvars;
 clc;
 
-load('NonDividing')
+load('NonDividing1')
 count = 1;
 
-for strain1 = 1
-    for rep1 = 1:2
-        
-        clear ind1_2 BIC1_1 BIC1_2
-        
-        %istrain = 1 - WT / = 2 - elp6
-        %irep = 1 - repression 1 / = 2 - repression 2
-        
-        %load all estimated parameter sets for both models and repressions
-        load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,1))
-        scR1_1 = scR;
-        load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,2))
-        scR1_2 = scR;
-        
-        %extract BIC values for all single-cell trajectories for data set 1
-        for i = 1:size(scR1_1,2)
-            BIC1_1(i) = scR1_1(i).sol.BIC;
-        end
-        for i = 1:size(scR1_2,2)
-            BIC1_2(i) = scR1_2(i).sol.BIC;
-        end
-        
-        %decide whether single-cell requires repressor model or not for data set 1
-        ind1_2 = find(BIC1_2-BIC1_1<-10); %model 2 best
-        ind1_1 = find(BIC1_2-BIC1_1>=-10);%model 1 best
-        
-        istrain = strain1;
-        irep = rep1;
-        
-        %plot the non-dividing cells of specified strain and repression
-        %also plot mean total GFP trace and maximal mean total GFP value
-        time = (1-1)*3/60:3/60:(40-1)*3/60;
-        if irep == 1
-            for isample = 1:100000
-                S = datasample(1:length(ind1_2),length(ind1_2));
-                indmax = find(mean(NonDividing{istrain}.I5r1(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.I5r1(ind1_2(S),1:40))));
-                T(count,isample) = time(indmax);
-            end
-            
-            display(sprintf('Mean of WT time maximal mean total GFP repression r1 is %d for repressor cells', mean(T(count,:))))
-            display(sprintf('Standard deviation of WT time maximal mean total GFP repression r1 is %d for repressor cells', std(T(count,:))))
-            display(sprintf('Number of WT repressor cells in repression r1 is %d', length(ind1_2)))
-            
-        else
-            for isample = 1:100000
-                S = datasample(1:length(ind1_2),length(ind1_2));
-                indmax = find(mean(NonDividing{istrain}.I5r2(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.I5r2(ind1_2(S),1:40))));
-                T(count,isample) = time(indmax);
-            end
-            
-            display(sprintf('Mean of WT time maximal mean total GFP repression r2 is %d for repressor cells', mean(T(count,:))))
-            display(sprintf('Standard deviation of WT time maximal mean total GFP repression r2 is %d for repressor cells', std(T(count,:))))
-            display(sprintf('Number of WT repressor cells in repression r2 is %d', length(ind1_2)))
-            
+strain1 = 1;
+for rep1 = 1:2
+    
+    clear ind1_2 BIC1_1 BIC1_2
+    
+    %istrain = 1 - WT / = 2 - elp6
+    %irep = 1 - repression 1 / = 2 - repression 2
+    
+    %load all estimated parameter sets for both models and repressions
+    load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,1))
+    scR1_1 = scR;
+    load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,2))
+    scR1_2 = scR;
+    
+    %extract BIC values for all single-cell trajectories for data set 1
+    for i = 1:size(scR1_1,2)
+        BIC1_1(i) = scR1_1(i).sol.BIC;
+    end
+    for i = 1:size(scR1_2,2)
+        BIC1_2(i) = scR1_2(i).sol.BIC;
+    end
+    
+    %decide whether single-cell requires repressor model or not for data set 1
+    ind1_2 = find(BIC1_2-BIC1_1<-10); %model 2 best
+    ind1_1 = find(BIC1_2-BIC1_1>=-10);%model 1 best
+    
+    istrain = strain1;
+    irep = rep1;
+    
+    %plot the non-dividing cells of specified strain and repression
+    %also plot mean total GFP trace and maximal mean total GFP value
+    time = (1-1)*3/60:3/60:(40-1)*3/60;
+    if irep == 1
+        for isample = 1:100000
+            S = datasample(1:length(ind1_2),length(ind1_2));
+            indmax = find(mean(NonDividing{istrain}.r1(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.r1(ind1_2(S),1:40))));
+            T(count,isample) = time(indmax);
         end
         
-        count = count+1;
+        display(sprintf('Mean of WT time maximal mean total GFP repression r1 is %d for repressor cells', mean(T(count,:))))
+        display(sprintf('Standard deviation of WT time maximal mean total GFP repression r1 is %d for repressor cells', std(T(count,:))))
+        display(sprintf('Number of WT repressor cells in repression r1 is %d', length(ind1_2)))
+        
+    else
+        for isample = 1:100000
+            S = datasample(1:length(ind1_2),length(ind1_2));
+            indmax = find(mean(NonDividing{istrain}.r2(ind1_2(S),1:40))==max(mean(NonDividing{istrain}.r2(ind1_2(S),1:40))));
+            T(count,isample) = time(indmax);
+        end
+        
+        display(sprintf('Mean of WT time maximal mean total GFP repression r2 is %d for repressor cells', mean(T(count,:))))
+        display(sprintf('Standard deviation of WT time maximal mean total GFP repression r2 is %d for repressor cells', std(T(count,:))))
+        display(sprintf('Number of WT repressor cells in repression r2 is %d', length(ind1_2)))
         
     end
+    
+    count = count+1;
+    
 end
 
 figure('visible','off');
@@ -500,14 +490,14 @@ clearvars -except rep1 strain1 rep2 strain2 paired
 clc;
 
 %load all estimated parameter sets for both models and repressions
-load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,1))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,1))
 scR1_1 = scR;
-load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,2))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,2))
 scR1_2 = scR;
 
-load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,1))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,1))
 scR2_1 = scR;
-load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,2))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,2))
 scR2_2 = scR;
 
 %extract BIC values for all single-cell trajectories for data set 1
@@ -535,27 +525,27 @@ ind2_2 = find(BIC2_2-BIC2_1<-10);
 ind2_1 = find(BIC2_2-BIC2_1>=-10);
 
 %get the data sets for both experiments
-load('NonDividing')
+load('NonDividing1')
 
 %extract data from non-dividing cells structure
 if rep1 == 1
-    data1 = NonDividing{strain1}.I5r1;
-    momID1 = NonDividing{strain1}.I5momIDr1;
-    mompos1 = NonDividing{strain1}.I5momposr1;
+    data1 = NonDividing{strain1}.r1;
+    momID1 = NonDividing{strain1}.momIDr1;
+    mompos1 = NonDividing{strain1}.momposr1;
 else
-    data1 = NonDividing{strain1}.I5r2;
-    momID1 = NonDividing{strain1}.I5momIDr2;
-    mompos1 = NonDividing{strain1}.I5momposr2;
+    data1 = NonDividing{strain1}.r2;
+    momID1 = NonDividing{strain1}.momIDr2;
+    mompos1 = NonDividing{strain1}.momposr2;
 end
 
 if rep2 == 1
-    data2 = NonDividing{strain2}.I5r1;
-    momID2 = NonDividing{strain2}.I5momIDr1;
-    mompos2 = NonDividing{strain2}.I5momposr1;
+    data2 = NonDividing{strain2}.r1;
+    momID2 = NonDividing{strain2}.momIDr1;
+    mompos2 = NonDividing{strain2}.momposr1;
 else
-    data2 = NonDividing{strain2}.I5r2;
-    momID2 = NonDividing{strain2}.I5momIDr2;
-    mompos2 = NonDividing{strain2}.I5momposr2;
+    data2 = NonDividing{strain2}.r2;
+    momID2 = NonDividing{strain2}.momIDr2;
+    mompos2 = NonDividing{strain2}.momposr2;
 end
 
 %extract the estimated parameter sets per cell and data set
@@ -587,36 +577,19 @@ if paired == 1
 end
 
 %determine the color according to strain and repression
-if strain1 == 1
-    if rep1 == 1
-        c1 = [175,198,233]./255;
-    else
-        c1 = [33,68,120]./255;
-    end
+if rep1 == 1
+    c1 = [117,157,233]./255;
 else
-    if rep1 == 1
-        c1 = [205,135,222]./255;
-    else
-        c1 = [67,31,117]./255;
-    end
+    c1 = [33,68,120]./255;
 end
 
-if strain2 == 1
-    if rep2 == 1
-        c2 = [175,198,233]./255;
-    else
-        c2 = [33,68,120]./255;
-    end
+if rep2 == 1
+    c2 = [117,157,233]./255;
 else
-    if rep2 == 1
-        c2 = [205,135,222]./255;
-    else
-        c2 = [67,31,117]./255;
-    end
+    c2 = [33,68,120]./255;
 end
 
 figure('visible','off');
-
 %for each of the estimated parameters GFP0, delay, rprod and rdeg do
 for ipar = 1:4
     
@@ -666,8 +639,8 @@ for ipar = 1:4
 end
 
 %save figure
-% set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 13 4])
-% print('-dpdf','./Figures/Fig3F','-painters')
+set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 13 4])
+print('-dpdf','./Figures/Fig3F','-painters')
 
 %% Figure 3G - GFP0 vs tdelay for WT
 
@@ -683,14 +656,14 @@ clearvars -except rep1 strain1 rep2 strain2 paired
 clc;
 
 %load all estimated parameter sets for both models and repressions
-load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,1))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,1))
 scR1_1 = scR;
-load(sprintf('scR_strain%d_rep%d_model%d',strain1,rep1,2))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,2))
 scR1_2 = scR;
 
-load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,1))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,1))
 scR2_1 = scR;
-load(sprintf('scR_strain%d_rep%d_model%d',strain2,rep2,2))
+load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,2))
 scR2_2 = scR;
 
 %extract BIC values for all single-cell trajectories for data set 1
@@ -717,30 +690,6 @@ end
 ind2_2 = find(BIC2_2-BIC2_1<-10);
 ind2_1 = find(BIC2_2-BIC2_1>=-10);
 
-%get the data sets for both experiments
-load('NonDividing')
-
-%extract relevant information from non-dividing cell structure
-if rep1 == 1
-    data1 = NonDividing{strain1}.I5r1;
-    momID1 = NonDividing{strain1}.I5momIDr1;
-    mompos1 = NonDividing{strain1}.I5momposr1;
-else
-    data1 = NonDividing{strain1}.I5r2;
-    momID1 = NonDividing{strain1}.I5momIDr2;
-    mompos1 = NonDividing{strain1}.I5momposr2;
-end
-
-if rep2 == 1
-    data2 = NonDividing{strain2}.I5r1;
-    momID2 = NonDividing{strain2}.I5momIDr1;
-    mompos2 = NonDividing{strain2}.I5momposr1;
-else
-    data2 = NonDividing{strain2}.I5r2;
-    momID2 = NonDividing{strain2}.I5momIDr2;
-    mompos2 = NonDividing{strain2}.I5momposr2;
-end
-
 %extract the estimated parameter sets per cell and data set
 for icell = 1:length(scR1_2)
     clear par
@@ -758,33 +707,24 @@ end
 Par1 = Par1(ind1_2,:);
 Par2 = Par2(ind2_2,:);
 
+%split into low (<3) and high (>3) inducing cells
+Par1a = Par1(Par1(:,1)<3,:);
+Par2a = Par2(Par2(:,1)<3,:);
+
+Par1b = Par1(Par1(:,1)>3,:);
+Par2b = Par2(Par2(:,1)>3,:);
+
 %determine color according ot strain and repression
-if strain1 == 1
-    if rep1 == 1
-        c1 = [175,198,233]./255;
-    else
-        c1 = [33,68,120]./255;
-    end
+if rep1 == 1
+    c1 = [175,198,233]./255;
 else
-    if rep1 == 1
-        c1 = [205,135,222]./255;
-    else
-        c1 = [67,31,117]./255;
-    end
+    c1 = [33,68,120]./255;
 end
 
-if strain2 == 1
-    if rep2 == 1
-        c2 = [175,198,233]./255;
-    else
-        c2 = [33,68,120]./255;
-    end
+if rep2 == 1
+    c2 = [117,157,233]./255;
 else
-    if rep2 == 1
-        c2 = [205,135,222]./255;
-    else
-        c2 = [67,31,117]./255;
-    end
+    c2 = [33,68,120]./255;
 end
 
 figure('visible','off');
@@ -796,24 +736,33 @@ plot(Par1(:,1),Par1(:,2),'.','Color',c1,'Markersize',10)
 hold on
 
 %get linear regression fit
-con1 = polyfit(Par1(:,1),Par1(:,2),1);
+con1a = polyfit(Par1a(:,1),Par1a(:,2),1);
 % Display evaluated equation y = m*x + b
-disp(['Repression 1: Equation is y = ' num2str(con1(1)) '*x + ' num2str(con1(2))]);
+disp(['Repression 1a: Equation is y = ' num2str(con1a(1)) '*x + ' num2str(con1a(2))]);
 % Evaluate fit equation using polyval
-y1_est = polyval(con1,Par1(:,1));
+y1_esta = polyval(con1a,Par1a(:,1));
 % Add trend line to plot
 hold on
-plot(Par1(:,1),y1_est,'-','Color',c1,'LineWidth',2)
+plot(Par1a(:,1),y1_esta,'-','Color',c1,'LineWidth',2)
 hold on
 
-con2 = polyfit(Par2(:,1),Par2(:,2),1);
+con2a = polyfit(Par2a(:,1),Par2a(:,2),1);
 % Display evaluated equation y = m*x + b
-disp(['Repression 2: Equation is y = ' num2str(con2(1)) '*x + ' num2str(con2(2))]);
+disp(['Repression 2a: Equation is y = ' num2str(con2a(1)) '*x + ' num2str(con2a(2))]);
 % Evaluate fit equation using polyval
-y2_est = polyval(con2,Par2(:,1));
+y2_esta = polyval(con2a,Par2a(:,1));
 % Add trend line to plot
 hold on
-plot(Par2(:,1),y2_est,'-','Color',c2,'LineWidth',2)
+plot(Par2a(:,1),y2_esta,'-','Color',c2,'LineWidth',2)
+
+con2b = polyfit(Par2b(:,1),Par2b(:,2),1);
+% Display evaluated equation y = m*x + b
+disp(['Repression 2b: Equation is y = ' num2str(con2b(1)) '*x + ' num2str(con2b(2))]);
+% Evaluate fit equation using polyval
+y2_estb = polyval(con2b,Par2b(:,1));
+% Add trend line to plot
+hold on
+plot(Par2b(:,1),y2_estb,'-','Color',c2,'LineWidth',2)
 
 ylim([0 inf])
 box off
