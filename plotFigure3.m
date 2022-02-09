@@ -707,13 +707,6 @@ end
 Par1 = Par1(ind1_2,:);
 Par2 = Par2(ind2_2,:);
 
-%split into low (<3) and high (>3) inducing cells
-Par1a = Par1(Par1(:,1)<3,:);
-Par2a = Par2(Par2(:,1)<3,:);
-
-Par1b = Par1(Par1(:,1)>3,:);
-Par2b = Par2(Par2(:,1)>3,:);
-
 %determine color according ot strain and repression
 if rep1 == 1
     c1 = [175,198,233]./255;
@@ -727,7 +720,8 @@ else
     c2 = [33,68,120]./255;
 end
 
-figure('visible','off');
+% figure('visible','off');
+figure
 
 %plot GFP0 vs tdelay for both data sets
 plot(Par2(:,1),Par2(:,2),'.','Color',c2,'Markersize',10)
@@ -736,33 +730,24 @@ plot(Par1(:,1),Par1(:,2),'.','Color',c1,'Markersize',10)
 hold on
 
 %get linear regression fit
-con1a = polyfit(Par1a(:,1),Par1a(:,2),1);
+con1 = polyfit(Par1(:,1),Par1(:,2),1);
 % Display evaluated equation y = m*x + b
-disp(['Repression 1a: Equation is y = ' num2str(con1a(1)) '*x + ' num2str(con1a(2))]);
+disp(['Repression 1: Equation is y = ' num2str(con1(1)) '*x + ' num2str(con1(2))]);
 % Evaluate fit equation using polyval
-y1_esta = polyval(con1a,Par1a(:,1));
+y1_est = polyval(con1,Par1(:,1));
 % Add trend line to plot
 hold on
-plot(Par1a(:,1),y1_esta,'-','Color',c1,'LineWidth',2)
+plot(Par1(:,1),y1_est,'-','Color',c1,'LineWidth',2)
 hold on
 
-con2a = polyfit(Par2a(:,1),Par2a(:,2),1);
+con2 = polyfit(Par2(:,1),Par2(:,2),1);
 % Display evaluated equation y = m*x + b
-disp(['Repression 2a: Equation is y = ' num2str(con2a(1)) '*x + ' num2str(con2a(2))]);
+disp(['Repression 2: Equation is y = ' num2str(con2(1)) '*x + ' num2str(con2(2))]);
 % Evaluate fit equation using polyval
-y2_esta = polyval(con2a,Par2a(:,1));
+y2_est = polyval(con2,Par2(:,1));
 % Add trend line to plot
 hold on
-plot(Par2a(:,1),y2_esta,'-','Color',c2,'LineWidth',2)
-
-con2b = polyfit(Par2b(:,1),Par2b(:,2),1);
-% Display evaluated equation y = m*x + b
-disp(['Repression 2b: Equation is y = ' num2str(con2b(1)) '*x + ' num2str(con2b(2))]);
-% Evaluate fit equation using polyval
-y2_estb = polyval(con2b,Par2b(:,1));
-% Add trend line to plot
-hold on
-plot(Par2b(:,1),y2_estb,'-','Color',c2,'LineWidth',2)
+plot(Par2(:,1),y2_est,'-','Color',c2,'LineWidth',2)
 
 ylim([0 inf])
 box off
@@ -778,6 +763,6 @@ if strain1 == 1
 end
 
 %save figure
-set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5 5])
-print('-dpdf','./Figures/Fig3G','-painters')
+% set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5 5])
+% print('-dpdf','./Figures/Fig3G','-painters')
 
