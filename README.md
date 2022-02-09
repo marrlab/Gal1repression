@@ -4,7 +4,7 @@ contains code and data accompanying
 
 __Gal1 repression memory in budding yeast__
 
-Lea Schuh<sup>1,2,3,4</sup>, Poonam Bheda<sup>3</sup>, Igor Kukhtevich<sup>3</sup>, Robert Schneider<sup>3,5,6,\*</sup>, Carsten Marr<sup>1,2,\*</sup>
+Lea Schuh<sup>1,2,3,4</sup>, Igor Kukhtevich<sup>3</sup>, Poonam Bheda<sup>3</sup>, Melanie Schulz<sup>1,2</sup>, Maria Bordukova<sup>1,2</sup>, Robert Schneider<sup>3,5,6,\*</sup>, Carsten Marr<sup>1,2,\*</sup>
 
 <sub><sup>
 <sup>1</sup>Institute of Computational Biology, Helmholtz Zentrum München - German Research Center for Environmental Health, 85764 Neuherberg, Germany <br>
@@ -18,13 +18,11 @@ Lea Schuh<sup>1,2,3,4</sup>, Poonam Bheda<sup>3</sup>, Igor Kukhtevich<sup>3</su
 
 ## Summary
 
-Changing environments force cells to adapt. A faster gene expression activation to a repeated stimulus, called reinduction memory, facilitates such adaptation and has been widely studied. However, it remains unknown whether there is also memory in gene repression. Here, we monitored galactokinase 1 (GAL1) expression in single Saccharomyces cerevisiae cells over 16 hours to analyze gene repression introduced by repeated carbon source switches from galactose to glucose. At the population level, we found the time to maximal Gal1 expression to be shortened upon a second repression. Due to induction being a highly variable process, we used mathematical modeling to discriminate between repressor and non-repressor cells and validated that the shortened time to maximal Gal1 expression was not due to different repressor cell fractions. Moreover, we identified a shortened repression delay in repression 2 using the estimated single-cell parameters, suggesting repression memory at the single-cell level. Interestingly, the shortened repression delay is independent of the Gal1 induction levels. Finally, we found that the previously identified gain-of-reinduction memory mutant elp6Δ also shows repression memory, exhibiting an even stronger decrease in the repression delay between first and second repression. Together, our work provides the first quantitative description of repression kinetics suggesting the presence of Gal1 repression memory at the single-cell level. <br>
+Cells must continuously adapt to changing environments and, thus, have evolved mechanisms allowing them to respond to repeated stimuli. For example, faster gene induction upon a repeated stimulus aids adaptation - a process known as reinduction memory. However, whether such a memory exists for gene repression is unclear. Here, we studied gene repression across repeated carbon source shifts in over 2,500 single Saccharomyces cerevisiae cells. By monitoring the expression of a carbon source-responsive gene, galactokinase 1 (Gal1), and mathematical modeling, we discovered repression memory at the population and single-cell level. Using a repressor model to estimate single-cell repression parameters, we show that repression memory is due to a shortened repression delay, the estimated time gap between carbon source shift and Gal1 expression termination, upon the repeated carbon source shift. Additionally, we show that cells lacking Elp6 display a gain-of-repression-memory phenotype characterized by a stronger decrease in repression delay between two consecutive carbon source shifts. Collectively, our study provides the first quantitative description of repression memory in single cells. <br>
 
 Required software and toolboxes:
 
 - MATLAB (R2017b)
-- [PESTO](https://github.com/ICB-DCM/PESTO version 1.1.9 for parameter estimation and MCMC sampling)
-- PhyloCell (https://github.com/gcharvin/phyloCell for pre-processing the PhyloCell structures to MATLAB structures)
 
 The analysis was performed on a macOS Big Sur version 11.4. <br>
 
@@ -37,6 +35,7 @@ Here you can find the list of all folders contained in this repository:
 - [Functions](Functions)
 - [Results](Results)
 - [Segmentation](Segmentation)
+- [Tools](Tools)
 
 ## How to run the code
 
