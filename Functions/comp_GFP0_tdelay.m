@@ -73,12 +73,31 @@ end
 Par1 = Par1(ind1_2,:);
 Par2 = Par2(ind2_2,:);
 
-%split into low (<3) and high (>3) inducing cells
-Par1a = Par1(Par1(:,1)<3,:);
-Par2a = Par2(Par2(:,1)<3,:);
+Par1a = Par1;
+Par1b = Par1;
+Par2a = Par2;
+Par2b = Par2;
 
-Par1b = Par1(Par1(:,1)>3,:);
-Par2b = Par2(Par2(:,1)>3,:);
+% Par1 = Par1(randsample(1:length(Par1),72),:);
+% Par2 = Par2(randsample(1:length(Par2),248),:);
+
+%split into low (<3) and high (>3) inducing cells
+% Par1a = Par1(Par1(:,1)<1.5,:);
+% Par2a = Par2(Par2(:,1)<1.5,:);
+% 
+% Par1b = Par1(Par1(:,1)>1.5,:);
+% Par2b = Par2(Par2(:,1)>1.5,:);
+% 
+% [rho1a,pval1a] = corr(Par1a(:,1),Par1a(:,2));
+% [rho1b,pval1b] = corr(Par1b(:,1),Par1b(:,2));
+% [rho2a,pval2a] = corr(Par2a(:,1),Par2a(:,2));
+% [rho2b,pval2b] = corr(Par2b(:,1),Par2b(:,2));
+% 
+% pval1a
+% pval1b
+% pval2a
+% pval2b
+
 
 %get linear regression fits for data set 1 < 3
 c1 = polyfit(Par1a(:,1),Par1a(:,2),1);
@@ -134,10 +153,10 @@ sol_GFP0_tdelay.c2b = c2;
 sol_GFP0_tdelay.stats1b = stats1;
 sol_GFP0_tdelay.stats2b = stats2;
 
-if iexp == 1
-    save(sprintf('./Results/sol1_GFP0_tdelay_%d_%d_%d_%d',rep1,strain1,rep2,strain2),'sol_GFP0_tdelay')
-else
-    save(sprintf('./Results/sol2_GFP0_tdelay_%d_%d_%d_%d',rep1,strain1,rep2,strain2),'sol_GFP0_tdelay')
-end
+% if iexp == 1
+%     save(sprintf('./Results/sol1_GFP0_tdelay_%d_%d_%d_%d',rep1,strain1,rep2,strain2),'sol_GFP0_tdelay')
+% else
+%     save(sprintf('./Results/sol2_GFP0_tdelay_%d_%d_%d_%d',rep1,strain1,rep2,strain2),'sol_GFP0_tdelay')
+% end
 
 end
