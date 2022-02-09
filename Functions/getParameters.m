@@ -11,9 +11,9 @@ function getParameters(model,rep,strain,plt,server,pre_sol,iexp)
 clearvars -except model rep strain plt server pre_sol iexp
 clc;
 
-%add path for AMICI and PESTO
+%add path for PESTO
 if server == 0 %adapt paths
-    addpath(genpath('/Users/lea.schuh/Documents/PhD/ICB/Xenopus/PESTO-master'))
+    addpath(genpath('./Tools/PESTO-master'))
     addpath(genpath(pwd))
     if iexp == 1
         load('NonDividing1')
@@ -21,12 +21,12 @@ if server == 0 %adapt paths
         load('NonDividing2')
     end
 else %adapt paths
-    addpath(genpath('/home/icb/lea.schuh/PESTO-master'))
+    addpath(genpath('./Tools/PESTO-master'))
     addpath(genpath(pwd))
     if iexp == 1
-        load('/home/icb/lea.schuh/Gal1/NonDividing1')
+        load('NonDividing1')
     else
-        load('/home/icb/lea.schuh/Gal1/NonDividing2')
+        load('NonDividing2')
     end
 end
 
