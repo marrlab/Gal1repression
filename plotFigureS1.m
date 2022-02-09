@@ -826,7 +826,8 @@ else
     c2 = [33,68,120]./255;
 end
 
-figure('visible','off');
+% figure('visible','off');
+figure
 
 %plot GFP0 vs tdelay for both data sets
 plot(Par2(:,1),Par2(:,2),'.','Color',c2,'Markersize',10)
@@ -868,6 +869,6 @@ if strain1 == 1
 end
 
 %save figure
-set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5 5])
-print('-dpdf','./Figures/FigS1G','-painters')
+% set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5 5])
+% print('-dpdf','./Figures/FigS1G','-painters')
 
