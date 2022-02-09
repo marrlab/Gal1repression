@@ -1,9 +1,7 @@
 addpath(genpath(pwd))
 
 %add Phylocell path
-%if no Phylocell installed - skip this step and continue using the
-%SExpI5_posX_Y_Z files in the data folder
-addpath(genpath('/Users/lea.schuh/Downloads/phyloCell-dev-gcharvin-2-2.2/phyloCell'))
+addpath(genpath('./Tools'))
 clearvars;
 clc;
 
