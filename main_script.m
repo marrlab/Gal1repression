@@ -7,15 +7,15 @@ addpath(genpath(pwd))
 
 %reformat the output files of Cell ACDC (.csv) to match the output from
 %PhyloCell 
-getReformatting;
+%only required to run if one is working on the raw data outputs from Cell ACDC 
+%however, we here provide the already reformatted outputs 
+% getReformatting;
 
 %extract single cell information from segmentation files for WT and elp6
-%!!here: manually add Phylocell path  in script getPreprocessing.m line 6!! 
 getPreprocessing;
 
 %compute non-dividing cells for repression periods for WT and elp6
-% getNonDividing(iexp)
-%iexp = 1 - main experiment / iexp = 2 - replicate experiment
+% getNonDividing(iexp), where iexp = 1 - main experiment / iexp = 2 - replicate experiment
 %main experiment
 getNonDividing(1)
 %replicate experiment
@@ -32,8 +32,6 @@ getNonDividing(2)
 %server = 0 or 1 / server == 0 - not on server / server == 1 - on server
 %pre_sol = 0 or 1 / pre_sol == 0 - do not load precomputed parameter estimates / pre_sol == 1 - load precomputed parameter estimates
 %iexp = 1 - main experiment / iexp = 2 - replicate experiment
-
-%!!add path to PESTO manually to script getParameters.m line 15 and potentially server paths lines 19 and 21!!
 
 %main experiment
 %model non-repressor, repression 1, strain WT, plots, no server, no
