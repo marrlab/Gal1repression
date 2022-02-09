@@ -643,9 +643,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.66524145"
-     inkscape:cx="335.6203"
-     inkscape:cy="343.58635"
+     inkscape:zoom="1.3304829"
+     inkscape:cx="468.6547"
+     inkscape:cy="453.32095"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -663,7 +663,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -30258,7 +30258,7 @@
     </g>
     <g
        id="g56085-2-7-6-9-7-3-6-93"
-       transform="matrix(0.04409722,0,0,0.04409722,65.247759,-195.09537)"
+       transform="matrix(0.04409722,0,0,0.04409722,69.614709,-195.09537)"
        style="fill:#323232;fill-opacity:1">
       <g
          id="g56087-2-0-7-7-3-0-5-4"
@@ -30267,13 +30267,17 @@
         <text
            style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#323232;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="text56091-0-0-1-7-0-3-5-0"
-           x="38.545387"
+           x="35.281033"
            y="-32.39473"><tspan
-             x="38.545387"
+             x="35.281033"
              sodipodi:role="line"
              id="tspan56089-0-1-6-6-9-3-8-7"
              y="-32.39473"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1">p-value=9.2e-5</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1"><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+   id="tspan12456">p</tspan> = 9.2·10<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan12451">-5</tspan></tspan></text>
       </g>
     </g>
     <g
@@ -30299,7 +30303,7 @@
     </g>
     <g
        id="g56085-2-7-6-9-7-3-6-93-8"
-       transform="matrix(0.04409722,0,0,0.04409722,112.99626,-195.09537)"
+       transform="matrix(0.04409722,0,0,0.04409722,117.36321,-195.09537)"
        style="fill:#323232;fill-opacity:1">
       <g
          id="g56087-2-0-7-7-3-0-5-4-5"
@@ -30308,13 +30312,17 @@
         <text
            style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#323232;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="text56091-0-0-1-7-0-3-5-0-0"
-           x="38.551502"
+           x="35.27684"
            y="-32.39473"><tspan
-             x="38.551502"
+             x="35.27684"
              sodipodi:role="line"
              id="tspan56089-0-1-6-6-9-3-8-7-8"
              y="-32.39473"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1">p-value=2.7e-7</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1"><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+   id="tspan12458">p</tspan> = 2.7·10<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan12453">-7</tspan></tspan></text>
       </g>
     </g>
     <g
@@ -40703,7 +40711,7 @@
     </g>
     <g
        id="g56085-2-7-6-9-7-3-6-93-15"
-       transform="matrix(0.04409722,0,0,0.04409722,-5.2558787,-135.68679)"
+       transform="matrix(0.04409722,0,0,0.04409722,-1.2859209,-135.68679)"
        style="display:inline;fill:#323232;fill-opacity:1">
       <g
          id="g56087-2-0-7-7-3-0-5-4-8"
@@ -40712,13 +40720,17 @@
         <text
            style="font-variant:normal;font-weight:normal;font-size:10.0071px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#323232;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="text56091-0-0-1-7-0-3-5-0-09"
-           x="48.654022"
+           x="45.679634"
            y="-32.39473"><tspan
-             x="48.654022"
+             x="45.679634"
              sodipodi:role="line"
              id="tspan56089-0-1-6-6-9-3-8-7-2"
              y="-32.39473"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1">p-value=3.3e-9</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1"><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+   id="tspan12460">p</tspan> = 3.3·10<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan12455">-9</tspan></tspan></text>
       </g>
     </g>
     <g
@@ -42356,7 +42368,7 @@
     </g>
     <g
        id="g56085-2-7-6-9-7-3-6-1-5"
-       transform="matrix(0.04409722,0,0,0.04409722,22.688201,-137.98305)"
+       transform="matrix(0.04409722,0,0,0.04409722,26.658159,-137.98305)"
        style="display:inline;fill:#323232;fill-opacity:1">
       <g
          id="g56087-2-0-7-7-3-0-5-5-5"
@@ -42365,13 +42377,17 @@
         <text
            style="font-variant:normal;font-weight:normal;font-size:10.0071px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#323232;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="text56091-0-0-1-7-0-3-5-5-5"
-           x="41.898808"
+           x="38.921841"
            y="-25.87335"><tspan
-             x="41.898808"
+             x="38.921841"
              sodipodi:role="line"
              id="tspan56089-0-1-6-6-9-3-8-8-7"
              y="-25.87335"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1">p-value=1.5e-3</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1"><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+   id="tspan12462">p</tspan> = 1.5·10<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan12457">-3</tspan></tspan></text>
       </g>
     </g>
     <g
