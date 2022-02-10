@@ -75,17 +75,19 @@ for icount = 1:size(T,1)
     
     if icount == 1
         c = [117,157,233]./255;
+        y = 2;
     else
         c = [203,133,221]./255;
+        y = 1;
     end
     
-    line([mean(T(icount,:)),mean(T(icount,:))],[icount-0.4,icount+0.4],'Color',c,'Linewidth',1)
+    line([mean(T(icount,:)),mean(T(icount,:))],[y-0.4,y+0.4],'Color',c,'Linewidth',1)
     hold on
-    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[icount,icount],'Color',c,'Linewidth',1)
+    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[y,y],'Color',c,'Linewidth',1)
     hold on
-    line([mean(T(icount,:))+std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[icount-0.2,icount+0.2],'Color',c,'Linewidth',1)
+    line([mean(T(icount,:))+std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[y-0.2,y+0.2],'Color',c,'Linewidth',1)
     hold on
-    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))-std(T(icount,:))],[icount-0.2,icount+0.2],'Color',c,'Linewidth',1)
+    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))-std(T(icount,:))],[y-0.2,y+0.2],'Color',c,'Linewidth',1)
     
 end
 
@@ -96,6 +98,8 @@ box off
 set(gca,'linewidth',1.02)
 set(gca,'FontSize',11)
 set(gca,'FontName','Arial')
+xlabel('time to maximal mean total GFP (h)')
+ylim([0,3])
 
 %save figure
 set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
@@ -322,18 +326,20 @@ for icount = 1:size(T,1)
     
     if icount == 1
         c = [33,68,120]./255;
+        y = 2;
     else
         c = [66,30,115]./255;
+        y = 1;
     end
     
-    line([mean(T(icount,:)),mean(T(icount,:))],[icount-0.4,icount+0.4],'Color',c,'Linewidth',1)
+    line([mean(T(icount,:)),mean(T(icount,:))],[y-0.4,y+0.4],'Color',c,'Linewidth',1)
     hold on
-    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[icount,icount],'Color',c,'Linewidth',1)
+    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[y,y],'Color',c,'Linewidth',1)
     hold on
-    line([mean(T(icount,:))+std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[icount-0.2,icount+0.2],'Color',c,'Linewidth',1)
+    line([mean(T(icount,:))+std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[y-0.2,y+0.2],'Color',c,'Linewidth',1)
     hold on
-    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))-std(T(icount,:))],[icount-0.2,icount+0.2],'Color',c,'Linewidth',1)
-    
+    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))-std(T(icount,:))],[y-0.2,y+0.2],'Color',c,'Linewidth',1)
+     
 end
 
 % xlim([0,5])
@@ -343,6 +349,8 @@ box off
 set(gca,'linewidth',1.02)
 set(gca,'FontSize',11)
 set(gca,'FontName','Arial')
+xlabel('time to maximal mean total GFP (h)')
+ylim([0,3])
 
 %save figure
 set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
