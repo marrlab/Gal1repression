@@ -324,13 +324,13 @@ for istrain = 1:2
 end
 
 if iexp == 1
-    save('./Melanie/Data/NonDividing1','NonDividing')
+    save('./Data/NonDividing1','NonDividing')
     %     xlswrite('./Data/NonDividing1_WT_rep1.xlsx',NonDividing{1}.I5r1,1,'A1');
     %     xlswrite('./Data/NonDividing1_WT_rep2.xlsx',NonDividing{1}.I5r2,1,'A1');
     %     xlswrite('./Data/NonDividing1_elp6_rep1.xlsx',NonDividing{2}.I5r1,1,'A1');
     %     xlswrite('./Data/NonDividing1_elp6_rep2.xlsx',NonDividing{2}.I5r2,1,'A1');
 else
-    save('./Melanie/Data/NonDividing2','NonDividing')
+    save('./Data/NonDividing2','NonDividing')
     %     xlswrite('./Data/NonDividing2_WT_rep1.xlsx',NonDividing{1}.I5r1,1,'A1');
     %     xlswrite('./Data/NonDividing2_WT_rep2.xlsx',NonDividing{1}.I5r2,1,'A1');
     %     xlswrite('./Data/NonDividing2_elp6_rep1.xlsx',NonDividing{2}.I5r1,1,'A1');
