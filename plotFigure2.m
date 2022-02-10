@@ -90,9 +90,9 @@ for i = 1:length(Data)
     
 end
 
-ylabel('GFP intensity')
+ylabel('total Gal1-GFP fluorescence (a.u.)')
 yticks([0,5,10,15])
-xlabel('time (h)')
+xlabel('experimental time (h)')
 xticks([0,4,7,11,14,16])
 box off
 set(gca,'linewidth',1.02)
@@ -200,7 +200,7 @@ for irep = 1:2
         
     end
     
-    ylabel('GFP intensity')
+    ylabel('total GFP (a.u)')
     if irep == 1
         yticks([0,2,4])
         ylim([0,5])
@@ -208,7 +208,7 @@ for irep = 1:2
         yticks([0,5,10,15])
         ylim([0,15])
     end
-    xlabel('time (h)')
+    xlabel('repression time (h)')
     xticks([0,1,2])
     box off
     set(gca,'linewidth',1.02)
