@@ -174,7 +174,7 @@ for i = 1:length(Data)
     %rename to S
     S = S2;
     
-    saveS = sprintf('./Melanie/Data/S%s',Data{i});
+    saveS = sprintf('./Data/S%s',Data{i});
     save(saveS,'S');
     
 end
