@@ -231,8 +231,8 @@ for  irep = 1:2
     
     %load data of computed non-dividing cells
     load('NonDividing2')
-%     figure('visible','off');
-            figure
+    figure('visible','off');
+%             figure
     
     %define color according to strain and repression
     if irep == 1
