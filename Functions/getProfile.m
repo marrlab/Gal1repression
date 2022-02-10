@@ -18,15 +18,13 @@ clc;
 
 %add path for AMICI and PESTO
 if server == 0 %adapt paths
-    addpath(genpath('/Users/lea.schuh/Documents/PhD/ICB/Xenopus/PESTO-master'))
-    addpath(genpath('/Users/lea.schuh/Documents/PhD/ICB/Xenopus/AMICI-master'))
+    addpath(genpath('./Tools/PESTO-master'))
     addpath(genpath(pwd))
     load('NonDividing1')
 else %adapt paths
-    addpath(genpath('/home/icb/lea.schuh/AMICI-master'))
-    addpath(genpath('/home/icb/lea.schuh/PESTO-master'))
+    addpath(genpath('/Tools/PESTO-master'))
     addpath(genpath(pwd))
-    load('/home/icb/lea.schuh/Gal1/NonDividing1')
+    load('NonDividing1')
 end
 
 for imodel = model
@@ -126,6 +124,7 @@ for imodel = model
                     else
                         ylim([110,113])
                     end
+                    ylabel('logL')
                 end
                 
                 %save figure
