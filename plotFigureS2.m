@@ -98,9 +98,9 @@ for i = 1:length(Data)
     
 end
 
-ylabel('GFP intensity')
+ylabel('total Gal1-GFP fluorescence (a.u)')
 yticks([0,2,4])
-xlabel('time (h)')
+xlabel('experimental time (h)')
 xticks([0,4,7,11,14,16])
 box off
 set(gca,'linewidth',1.02)
@@ -195,7 +195,7 @@ for irep = 1:2
         
     end
     
-    ylabel('GFP intensity')
+    ylabel('total GFP (a.u.)')
     if irep == 1
         yticks([0,1,2])
         ylim([0,2.5])
@@ -203,7 +203,7 @@ for irep = 1:2
         yticks([0,2,4])
         ylim([0,4])
     end
-    xlabel('time (h)')
+    xlabel('repression time (h)')
     xticks([0,2,4])
     box off
     set(gca,'linewidth',1.02)
@@ -223,6 +223,8 @@ end
 %istrain = 1 - WT / = 2 - elp6
 %irep = 1 - repression 1 / = 2 - repression 2
 
+rand('seed', 2);
+
 istrain = 2;
 for  irep = 1:2
     
@@ -232,6 +234,7 @@ for  irep = 1:2
     %load data of computed non-dividing cells
     load('NonDividing2')
     figure('visible','off');
+%     figure
     
     %define color according to strain and repression
     if irep == 1
@@ -334,8 +337,8 @@ for  irep = 1:2
         end
     end
     
-    ylabel('GFP intensity')
-    xlabel('time (h)')
+    ylabel('total GFP (a.u.)')
+    xlabel('repression time (h)')
     xticks([0,1,2])
     box off
     set(gca,'linewidth',1.02)
@@ -441,8 +444,7 @@ for irep = 1:2
         set(gca,'linewidth',1.02)
         set(gca,'FontSize',11)
         set(gca,'FontName','Arial')
-        ylabel('GFP intensity')
-        xlabel('model')
+        ylabel('GFP_0')
     end
     
     %save figure
@@ -528,17 +530,19 @@ for icount = 1:size(T,1)
     
     if icount == 1
         c = [203,133,221]./255;
+        y = 2;
     else
         c = [66,30,115]./255;
+        y = 1;
     end
     
-    line([mean(T(icount,:)),mean(T(icount,:))],[icount-0.4,icount+0.4],'Color',c,'Linewidth',1)
+    line([mean(T(icount,:)),mean(T(icount,:))],[y-0.4,y+0.4],'Color',c,'Linewidth',1)
     hold on
-    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[icount,icount],'Color',c,'Linewidth',1)
+    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[y,y],'Color',c,'Linewidth',1)
     hold on
-    line([mean(T(icount,:))+std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[icount-0.2,icount+0.2],'Color',c,'Linewidth',1)
+    line([mean(T(icount,:))+std(T(icount,:)),mean(T(icount,:))+std(T(icount,:))],[y-0.2,y+0.2],'Color',c,'Linewidth',1)
     hold on
-    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))-std(T(icount,:))],[icount-0.2,icount+0.2],'Color',c,'Linewidth',1)
+    line([mean(T(icount,:))-std(T(icount,:)),mean(T(icount,:))-std(T(icount,:))],[y-0.2,y+0.2],'Color',c,'Linewidth',1)
     
 end
 
@@ -550,6 +554,8 @@ box off
 set(gca,'linewidth',1.02)
 set(gca,'FontSize',11)
 set(gca,'FontName','Arial')
+xlabel('time to maximal mean total GFP (h)')
+ylim([0,3])
 
 %save figure
 set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 5.5 5])
