@@ -644,8 +644,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3304829"
-     inkscape:cx="468.6547"
-     inkscape:cy="453.32095"
+     inkscape:cx="210.10196"
+     inkscape:cy="191.01018"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -663,7 +663,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -29226,379 +29226,6 @@
        cy="40.972416"
        rx="8.3254452"
        ry="7.8577237" />
-    <g
-       id="g56358"
-       transform="translate(-1.0583333,-4.1076007)">
-      <g
-         id="g56115-9-6"
-         transform="matrix(0.35294115,0,0,0.35211266,17.556342,29.162795)"
-         style="fill:#000000;fill-opacity:1">
-        <text
-           transform="translate(-7,3.5)"
-           style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           id="text56119-4-0"><tspan
-             x="0"
-             y="0"
-             id="tspan56117-8-6"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1">non-repressor model</tspan></text>
-      </g>
-      <g
-         id="g27728"
-         transform="translate(0,-1.5874963)">
-        <g
-           id="g56113-7-3-7-2"
-           transform="matrix(0.04409722,0,0,0.04409722,18.588513,-246.32088)">
-          <g
-             id="g56115-9-6-9-9"
-             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-            <text
-               transform="translate(-7,3.5)"
-               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="text56119-4-0-5-0"><tspan
-                 x="0"
-                 y="0"
-                 id="tspan56117-8-6-8-9"
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">GFP</tspan></text>
-          </g>
-        </g>
-        <g
-           id="g93418"
-           transform="matrix(0,2.1242055,-2.1242055,0,349.97323,-84.051442)">
-          <path
-             d="m 57.988904,153.68334 0.16041,0.39236 h -0.32105 z"
-             style="fill:none;stroke:#000000;stroke-width:0.461605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path90423-8-1-5-0" />
-          <path
-             style="fill:none;stroke:#000000;stroke-width:0.173;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             d="m 57.988696,154.3065 v 1.22351"
-             id="path91998-5-3-9" />
-        </g>
-        <g
-           id="g93418-0"
-           transform="matrix(-1.5020401,1.5020401,-1.5020401,-1.5020401,352.57706,188.34269)">
-          <path
-             d="m 57.988904,153.68334 0.16041,0.39236 h -0.32105 z"
-             style="fill:none;stroke:#000000;stroke-width:0.461605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path90423-8-1-5-0-1" />
-          <path
-             style="fill:none;stroke:#000000;stroke-width:0.173;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             d="m 57.988696,154.3065 v 1.22351"
-             id="path91998-5-3-9-0" />
-        </g>
-        <g
-           id="g56113-7-3-7-5"
-           transform="matrix(0.04409722,0,0,0.04409722,10.63824,-250.77319)">
-          <g
-             id="g56115-9-6-9-4"
-             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-            <text
-               transform="translate(-7,3.5)"
-               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="text56119-4-0-5-1"><tspan
-                 x="0"
-                 y="0"
-                 id="tspan56117-8-6-8-5"
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">r<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan27704">basal</tspan></tspan></text>
-          </g>
-        </g>
-        <g
-           id="g56113-7-3-7-5-3"
-           transform="matrix(0.04409722,0,0,0.04409722,28.526677,-242.9495)">
-          <g
-             id="g56115-9-6-9-4-7"
-             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-            <text
-               transform="translate(-7,3.5)"
-               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="text56119-4-0-5-1-3"><tspan
-                 x="0"
-                 y="0"
-                 id="tspan56117-8-6-8-5-9"
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:baseline">r<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan27706">deg</tspan></tspan></text>
-          </g>
-        </g>
-      </g>
-      <rect
-         style="fill:none;stroke:#d35f5f;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:6;stroke-dasharray:none;stroke-opacity:1"
-         id="rect9879"
-         width="40.69001"
-         height="30.650848"
-         x="12.663455"
-         y="26.171957"
-         ry="5.3442507" />
-      <g
-         id="g23309"
-         transform="translate(0,4.7625002)">
-        <g
-           id="g56113-7-3-2"
-           transform="matrix(0.04409722,0,0,0.04409722,57.561518,-261.33208)"
-           style="fill:#000000;fill-opacity:1">
-          <g
-             id="g56115-9-6-2"
-             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)"
-             style="fill:#000000;fill-opacity:1">
-            <text
-               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="text56119-4-0-2"
-               x="-6.9624023"
-               y="3.5"><tspan
-                 x="-6.9624023"
-                 y="3.5"
-                 id="tspan56117-8-6-0"
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1">repressor model</tspan></text>
-          </g>
-        </g>
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.265, 0.265;stroke-dashoffset:0;stroke-opacity:1"
-           d="M 82.447569,27.616337 V 42.772123"
-           id="path151655" />
-        <rect
-           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:6;stroke-dasharray:none;stroke-opacity:1"
-           id="rect9879-5"
-           width="47.101814"
-           height="30.652029"
-           x="56.108448"
-           y="21.401104"
-           ry="5.3444567" />
-        <g
-           id="g28117"
-           transform="translate(0,1.0583333)">
-          <g
-             id="g56113-7-3-7-2-4"
-             transform="matrix(0.04409722,0,0,0.04409722,57.56499,-253.72921)">
-            <g
-               id="g56115-9-6-9-9-8"
-               transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-              <text
-                 transform="translate(-7,3.5)"
-                 style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                 id="text56119-4-0-5-0-5"><tspan
-                   x="0"
-                   y="0"
-                   id="tspan56117-8-6-8-9-3"
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">GFP</tspan></text>
-            </g>
-          </g>
-          <g
-             id="g93418-4"
-             transform="matrix(0,2.1242055,-2.1242055,0,388.94971,-91.459774)">
-            <path
-               d="m 57.988904,153.68334 0.16041,0.39236 h -0.32105 z"
-               style="fill:none;stroke:#000000;stroke-width:0.461605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path90423-8-1-5-0-0" />
-            <path
-               style="fill:none;stroke:#000000;stroke-width:0.173;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               d="m 57.988696,154.3065 v 1.22351"
-               id="path91998-5-3-9-2" />
-          </g>
-          <g
-             id="g93418-0-3"
-             transform="matrix(-1.5020401,1.5020401,-1.5020401,-1.5020401,391.55354,180.93436)">
-            <path
-               d="m 57.988904,153.68334 0.16041,0.39236 h -0.32105 z"
-               style="fill:none;stroke:#000000;stroke-width:0.461605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path90423-8-1-5-0-1-1" />
-            <path
-               style="fill:none;stroke:#000000;stroke-width:0.173;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               d="m 57.988696,154.3065 v 1.22351"
-               id="path91998-5-3-9-0-3" />
-          </g>
-          <g
-             id="g56113-7-3-7-5-9"
-             transform="matrix(0.04409722,0,0,0.04409722,49.920356,-258.18152)">
-            <g
-               id="g56115-9-6-9-4-9"
-               transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-              <text
-                 transform="translate(-7,3.5)"
-                 style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                 id="text56119-4-0-5-1-2"><tspan
-                   x="0"
-                   y="0"
-                   id="tspan56117-8-6-8-5-5"
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">r<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan27704-3">prod</tspan></tspan></text>
-            </g>
-          </g>
-          <g
-             id="g56113-7-3-7-5-3-3"
-             transform="matrix(0.04409722,0,0,0.04409722,67.503154,-250.35783)">
-            <g
-               id="g56115-9-6-9-4-7-9"
-               transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-              <text
-                 transform="translate(-7,3.5)"
-                 style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                 id="text56119-4-0-5-1-3-7"><tspan
-                   x="0"
-                   y="0"
-                   id="tspan56117-8-6-8-5-9-0"
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:baseline">r<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan27706-4">deg</tspan></tspan></text>
-            </g>
-          </g>
-        </g>
-        <g
-           id="g27977"
-           transform="translate(-5.2916669,-5.6226303)">
-          <g
-             id="g56113-7-3-7-2-6"
-             transform="matrix(0.04409722,0,0,0.04409722,82.45329,-247.04825)">
-            <g
-               id="g56115-9-6-9-9-6"
-               transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-              <text
-                 transform="translate(-7,3.5)"
-                 style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                 id="text56119-4-0-5-0-1"><tspan
-                   x="0"
-                   y="0"
-                   id="tspan56117-8-6-8-9-2"
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">GFP</tspan></text>
-            </g>
-          </g>
-          <g
-             id="g93418-0-37"
-             transform="matrix(-1.5020401,1.5020401,-1.5020401,-1.5020401,416.44184,187.61532)">
-            <path
-               d="m 57.988904,153.68334 0.16041,0.39236 h -0.32105 z"
-               style="fill:none;stroke:#000000;stroke-width:0.461605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path90423-8-1-5-0-1-5" />
-            <path
-               style="fill:none;stroke:#000000;stroke-width:0.173;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-               d="m 57.988696,154.3065 v 1.22351"
-               id="path91998-5-3-9-0-4" />
-          </g>
-          <g
-             id="g56113-7-3-7-5-3-2"
-             transform="matrix(0.04409722,0,0,0.04409722,92.391454,-243.67687)">
-            <g
-               id="g56115-9-6-9-4-7-96"
-               transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-              <text
-                 transform="translate(-7,3.5)"
-                 style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                 id="text56119-4-0-5-1-3-8"><tspan
-                   x="0"
-                   y="0"
-                   id="tspan56117-8-6-8-5-9-3"
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:baseline">r<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan27706-43">deg</tspan></tspan></text>
-            </g>
-          </g>
-        </g>
-        <g
-           id="g56113-7-3-2-4"
-           transform="matrix(0.04409722,0,0,0.04409722,55.955808,-240.62704)">
-          <g
-             id="g56115-9-6-2-7"
-             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-            <text
-               transform="translate(-7,3.5)"
-               style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="text56119-4-0-2-8"><tspan
-                 x="0"
-                 y="0"
-                 id="tspan56117-8-6-0-6"
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">before</tspan></text>
-          </g>
-        </g>
-        <g
-           id="g56113-7-3-2-4-9-5"
-           transform="matrix(0.04409722,0,0,0.04409722,80.925408,-240.62704)">
-          <g
-             id="g56115-9-6-2-7-4-3"
-             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-            <text
-               transform="translate(-7,3.5)"
-               style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="text56119-4-0-2-8-9-5"><tspan
-                 x="0"
-                 y="0"
-                 id="tspan56117-8-6-0-6-9-6"
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">after</tspan></text>
-          </g>
-        </g>
-        <g
-           id="g28061"
-           transform="translate(0,-1.0583333)">
-          <path
-             d="M 99.196583,43.735409 98.36313,44.076153 V 43.394176 Z"
-             style="fill:none;stroke:#000000;stroke-width:0.980544;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path90423-8-1-5-0-0-5" />
-          <path
-             style="fill:none;stroke:#000000;stroke-width:0.367;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             d="M 99.844748,43.734966 H 58.219719"
-             id="path91998-5-3-9-2-6" />
-        </g>
-        <g
-           id="g56113-7-3-2-4-8"
-           transform="matrix(0.04409722,0,0,0.04409722,72.189745,-232.86538)">
-          <g
-             id="g56115-9-6-2-7-0"
-             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-            <text
-               style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="text56119-4-0-2-8-5"
-               x="-9.4363718"
-               y="-18.854647"><tspan
-                 x="-9.4363718"
-                 y="-18.854647"
-                 id="tspan56117-8-6-0-6-3"
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">t<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan28095">delay</tspan></tspan></text>
-          </g>
-        </g>
-        <g
-           id="g56113-7-3-2-4-9-5-0"
-           transform="matrix(0.04409722,0,0,0.04409722,81.444165,-236.36506)">
-          <g
-             id="g56115-9-6-2-7-4-3-5"
-             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-            <text
-               transform="translate(-7,3.5)"
-               style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="text56119-4-0-2-8-9-5-5"><tspan
-                 x="0"
-                 y="0"
-                 id="tspan56117-8-6-0-6-9-6-1"
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">time</tspan></text>
-          </g>
-        </g>
-      </g>
-      <path
-         d="m 48.416055,47.439579 -0.833453,0.340744 v -0.681977 z"
-         style="fill:none;stroke:#000000;stroke-width:0.980544;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         id="path90423-8-1-5-0-0-5-1" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.367;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 49.06422,47.439136 H 15.508983"
-         id="path91998-5-3-9-2-6-3" />
-      <g
-         id="g56113-7-3-2-4-9-5-0-5"
-         transform="matrix(0.04409722,0,0,0.04409722,34.367806,-231.60253)">
-        <g
-           id="g56115-9-6-2-7-4-3-5-0"
-           transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
-          <text
-             transform="translate(-7,3.5)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text56119-4-0-2-8-9-5-5-2"><tspan
-               x="0"
-               y="0"
-               id="tspan56117-8-6-0-6-9-6-1-1"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">time</tspan></text>
-        </g>
-      </g>
-    </g>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -38335,12 +37962,12 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="5.2833252"
-       y="58.128944"
+       y="62.187057"
        id="text26591-1"><tspan
          sodipodi:role="line"
          id="tspan26589-1"
          x="5.2833252"
-         y="58.128944"
+         y="62.187057"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0.264583">B</tspan></text>
     <g
        id="g56145-0-15-3"
@@ -38460,67 +38087,59 @@
          id="path10633" />
     </g>
     <g
-       id="g10147"
-       transform="translate(-102.08092,43.556674)">
+       id="g56085-2-76-1-2-3-0"
+       transform="matrix(0.04409722,0,0,0.04409722,-18.4304,-189.61593)"
+       style="fill:#000000;fill-opacity:1">
       <g
-         id="g56085-2-76-1-2-3-0"
-         transform="matrix(0.04409722,0,0,0.04409722,83.65052,-233.1726)"
+         id="g56087-2-7-4-19-5-8"
+         transform="matrix(8.0037052,0,0,7.9849174,1060.4917,6623.3291)"
          style="fill:#000000;fill-opacity:1">
-        <g
-           id="g56087-2-7-4-19-5-8"
-           transform="matrix(8.0037052,0,0,7.9849174,1060.4917,6623.3291)"
-           style="fill:#000000;fill-opacity:1">
-          <text
-             style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text56091-0-7-5-7-9-5"
+        <text
+           style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text56091-0-7-5-7-9-5"
+           x="-20.116127"
+           y="-14.807547"><tspan
              x="-20.116127"
-             y="-14.807547"><tspan
-               x="-20.116127"
-               sodipodi:role="line"
-               id="tspan56089-0-2-2-25-8-8"
-               y="-14.807547"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">BIC<tspan
+             sodipodi:role="line"
+             id="tspan56089-0-2-2-25-8-8"
+             y="-14.807547"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">BIC<tspan
    style="font-size:65%;baseline-shift:sub"
-   id="tspan28389">repressor</tspan>= -44</tspan></text>
-        </g>
+   id="tspan28389">repression</tspan>= -44</tspan></text>
       </g>
-      <path
-         style="display:inline;fill:none;stroke:#000000;stroke-width:0.296573;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 150.06807,52.945339 0.7659,0.916482 1.75468,-3.039194"
-         id="path7346"
-         sodipodi:nodetypes="ccc" />
     </g>
-    <g
-       id="g10156"
-       transform="translate(-102.08092,51.985036)">
-      <text
-         style="font-variant:normal;font-weight:normal;font-size:3.88056px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527"
-         id="text56091-0-7-5-0-89-9-7"
-         x="118.06521"
-         y="49.433346"
-         transform="scale(1.0011758,0.99882559)"><tspan
-           x="118.06521"
-           sodipodi:role="line"
-           id="tspan56089-0-2-2-0-1-12-3"
-           y="49.433346"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial">BIC<tspan
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.296573;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 49.574651,96.502013 0.7659,0.916482 1.75468,-3.039194"
+       id="path7346"
+       sodipodi:nodetypes="ccc" />
+    <text
+       style="font-variant:normal;font-weight:normal;font-size:3.88056px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527"
+       id="text56091-0-7-5-0-89-9-7"
+       x="17.689806"
+       y="101.47951"
+       transform="scale(1.0011758,0.99882559)"><tspan
+         x="17.689806"
+         sodipodi:role="line"
+         id="tspan56089-0-2-2-0-1-12-3"
+         y="101.47951"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial">BIC<tspan
    style="font-size:65%;baseline-shift:sub"
-   id="tspan28387">non-repressor</tspan>= <tspan
+   id="tspan28387">no repression</tspan>= <tspan
    style="fill:#ffffff;fill-opacity:1"
    id="tspan10135">-</tspan>10</tspan></text>
-      <g
-         id="g7470"
-         transform="matrix(0.534268,0,0,0.534268,55.396182,-30.892813)"
-         style="display:inline">
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 177.73423,146.0628 3.67496,3.67495"
-           id="path7446" />
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 181.40919,146.06279 -3.67496,3.67496"
-           id="path7446-9" />
-      </g>
+    <g
+       id="g7470"
+       transform="matrix(0.534268,0,0,0.534268,-45.097237,21.092223)"
+       style="display:inline">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 177.73423,146.0628 3.67496,3.67495"
+         id="path7446" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 181.40919,146.06279 -3.67496,3.67496"
+         id="path7446-9" />
     </g>
     <g
        id="g73432-9"
@@ -38734,7 +38353,7 @@
        id="path11951" />
     <g
        id="g10173"
-       transform="translate(-102.08092,51.985036)">
+       transform="translate(-100.49341,51.985036)">
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:0.296573;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 200.16993,48.262572 0.7659,0.916482 1.75468,-3.039194"
@@ -38752,47 +38371,41 @@
            y="49.433346"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:baseline;fill:#d35f5f;fill-opacity:1;stroke-width:0.352527">BIC<tspan
    style="font-size:65%;baseline-shift:sub"
-   id="tspan28391">non-repressor</tspan>= -210</tspan></text>
+   id="tspan28391">no repression</tspan>= -210</tspan></text>
     </g>
     <g
-       id="g10167"
-       transform="translate(-102.08092,43.556674)">
+       id="g7470-9"
+       transform="matrix(0.534268,0,0,0.534268,5.0047001,17.127369)"
+       style="display:inline">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 177.73423,146.0628 3.67496,3.67495"
+         id="path7446-3" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 181.40919,146.06279 -3.67496,3.67496"
+         id="path7446-9-3" />
+    </g>
+    <g
+       id="g56085-2-76-1-2-3-0-6"
+       transform="matrix(0.04409722,0,0,0.04409722,28.9696,-189.61593)"
+       style="fill:#000000;fill-opacity:1">
       <g
-         id="g7470-9"
-         transform="matrix(0.534268,0,0,0.534268,105.49812,-26.429305)"
-         style="display:inline">
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 177.73423,146.0628 3.67496,3.67495"
-           id="path7446-3" />
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 181.40919,146.06279 -3.67496,3.67496"
-           id="path7446-9-3" />
-      </g>
-      <g
-         id="g56085-2-76-1-2-3-0-6"
-         transform="matrix(0.04409722,0,0,0.04409722,131.05052,-233.1726)"
+         id="g56087-2-7-4-19-5-8-6"
+         transform="matrix(8.0037052,0,0,7.9849174,1060.4917,6623.3291)"
          style="fill:#000000;fill-opacity:1">
-        <g
-           id="g56087-2-7-4-19-5-8-6"
-           transform="matrix(8.0037052,0,0,7.9849174,1060.4917,6623.3291)"
-           style="fill:#000000;fill-opacity:1">
-          <text
-             style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text56091-0-7-5-7-9-5-3"
+        <text
+           style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text56091-0-7-5-7-9-5-3"
+           x="-20.116127"
+           y="-14.807547"><tspan
              x="-20.116127"
-             y="-14.807547"><tspan
-               x="-20.116127"
-               sodipodi:role="line"
-               id="tspan56089-0-2-2-25-8-8-4"
-               y="-14.807547"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">BIC<tspan
+             sodipodi:role="line"
+             id="tspan56089-0-2-2-25-8-8-4"
+             y="-14.807547"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">BIC<tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub"
-   id="tspan28393">represso</tspan><tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan10011">r</tspan>= -206</tspan></text>
-        </g>
+   id="tspan28393">repression</tspan>= -206</tspan></text>
       </g>
     </g>
     <g
@@ -39956,82 +39569,6 @@
        style="fill:none;stroke:#000000;stroke-width:0.227717px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 82.817275,76.922018 v 3.96875"
        id="path10302-3-6" />
-    <g
-       id="g10039"
-       transform="translate(67.341166,-7.1332715)">
-      <text
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527"
-         id="text56091-0-7-5-0-8"
-         x="17.754532"
-         y="69.429138"
-         transform="scale(1.0011758,0.99882559)"><tspan
-           x="17.754532"
-           sodipodi:role="line"
-           id="tspan56089-0-2-2-0-0"
-           y="69.429138"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.352527">data</tspan></text>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.265, 0.265;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 13.199772,68.359287 h 3.564197"
-         id="path155433" />
-    </g>
-    <g
-       id="g10034"
-       transform="translate(63.800296,-7.1113765)">
-      <text
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;white-space:pre;inline-size:0;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527"
-         id="text56091-0-7-5-0-8-5"
-         x="105.89556"
-         y="22.931301"
-         transform="matrix(1.0011758,0,0,0.99882559,-70.424125,46.468649)"><tspan
-           x="105.89556"
-           id="tspan56089-0-2-2-0-0-6"
-           y="22.931301"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.352527">fit</tspan></text>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 30.833589,68.359287 h 3.564"
-         id="path155433-1" />
-    </g>
-    <g
-       id="g56085-2-76-1-2"
-       transform="matrix(0.04409722,0,0,0.04409722,4.3014381,-224.64216)"
-       style="fill:#000000;fill-opacity:1">
-      <g
-         id="g56087-2-7-4-19"
-         transform="matrix(8.0037052,0,0,7.9849174,1060.4917,6623.3291)"
-         style="fill:#000000;fill-opacity:1">
-        <text
-           style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           id="text56091-0-7-5-7"
-           x="-1.3253824"
-           y="-14.807547"><tspan
-             x="-1.3253824"
-             sodipodi:role="line"
-             id="tspan56089-0-2-2-25"
-             y="-14.807547"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1">repressor model</tspan></text>
-      </g>
-    </g>
-    <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527"
-       id="text56091-0-7-5-0-89"
-       x="13.107194"
-       y="62.287479"
-       transform="scale(1.0011758,0.99882559)"><tspan
-         x="13.107194"
-         sodipodi:role="line"
-         id="tspan56089-0-2-2-0-1"
-         y="62.287479"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;fill:#d35f5f;fill-opacity:1;stroke-width:0.352527">non-repressor model</tspan></text>
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect10041"
-       width="91.904999"
-       height="5.6571193"
-       x="11.951939"
-       y="58.406162"
-       ry="0" />
     <g
        id="g56145-0-15-3-3"
        transform="matrix(0.04409722,0,0,0.04409722,35.488185,71.012767)"
@@ -51432,6 +50969,436 @@
          d="m 219.53378,96.51049 0.15552,-64.247654 4.39124,-2.081073 0.31092,-0.0092 0.31214,0.0094 4.68118,2.292116 3.13706,3.729553 3.25196,5.626221 3.3711,7.612183 4.38807,12.405433 4.58991,15.679341 0.11331,18.983657"
          style="fill:none;stroke:#000000;stroke-width:1.74275508;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path13785" />
+    </g>
+    <g
+       id="g57210"
+       transform="translate(0,-2.9955027)">
+      <g
+         id="g27728"
+         transform="translate(-1.0583333,1.1840699)">
+        <g
+           id="g56113-7-3-7-2"
+           transform="matrix(0.04409722,0,0,0.04409722,18.588513,-246.32088)">
+          <g
+             id="g56115-9-6-9-9"
+             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+            <text
+               transform="translate(-7,3.5)"
+               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text56119-4-0-5-0"><tspan
+                 x="0"
+                 y="0"
+                 id="tspan56117-8-6-8-9"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">GFP</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g93418"
+           transform="matrix(0,2.1242055,-2.1242055,0,349.97323,-84.051442)">
+          <path
+             d="m 57.988904,153.68334 0.16041,0.39236 h -0.32105 z"
+             style="fill:none;stroke:#000000;stroke-width:0.461605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path90423-8-1-5-0" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.173;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 57.988696,154.3065 v 1.22351"
+             id="path91998-5-3-9" />
+        </g>
+        <g
+           id="g93418-0"
+           transform="matrix(-1.5020401,1.5020401,-1.5020401,-1.5020401,352.57706,188.34269)">
+          <path
+             d="m 57.988904,153.68334 0.16041,0.39236 h -0.32105 z"
+             style="fill:none;stroke:#000000;stroke-width:0.461605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path90423-8-1-5-0-1" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.173;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 57.988696,154.3065 v 1.22351"
+             id="path91998-5-3-9-0" />
+        </g>
+        <g
+           id="g56113-7-3-7-5"
+           transform="matrix(0.04409722,0,0,0.04409722,10.63824,-250.77319)">
+          <g
+             id="g56115-9-6-9-4"
+             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+            <text
+               transform="translate(-7,3.5)"
+               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text56119-4-0-5-1"><tspan
+                 x="0"
+                 y="0"
+                 id="tspan56117-8-6-8-5"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">r<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan27704">basal</tspan></tspan></text>
+          </g>
+        </g>
+        <g
+           id="g56113-7-3-7-5-3"
+           transform="matrix(0.04409722,0,0,0.04409722,28.526677,-242.9495)">
+          <g
+             id="g56115-9-6-9-4-7"
+             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+            <text
+               transform="translate(-7,3.5)"
+               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text56119-4-0-5-1-3"><tspan
+                 x="0"
+                 y="0"
+                 id="tspan56117-8-6-8-5-9"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:baseline">r<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan27706">deg</tspan></tspan></text>
+          </g>
+        </g>
+      </g>
+      <rect
+         style="fill:none;stroke:#d35f5f;stroke-width:0.470155;stroke-linejoin:round;stroke-miterlimit:6;stroke-dasharray:none;stroke-opacity:1"
+         id="rect9879"
+         width="40.69001"
+         height="27.101007"
+         x="11.605122"
+         y="32.49337"
+         ry="4.7253041" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.265, 0.265;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 81.389236,35.150407 V 50.306193"
+         id="path151655" />
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.470155;stroke-linejoin:round;stroke-miterlimit:6;stroke-dasharray:none;stroke-opacity:1"
+         id="rect9879-5"
+         width="47.101814"
+         height="27.102053"
+         x="55.050114"
+         y="32.485985"
+         ry="4.7254863" />
+      <g
+         id="g28117"
+         transform="translate(-1.0583333,8.5923999)">
+        <g
+           id="g56113-7-3-7-2-4"
+           transform="matrix(0.04409722,0,0,0.04409722,57.56499,-253.72921)">
+          <g
+             id="g56115-9-6-9-9-8"
+             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+            <text
+               transform="translate(-7,3.5)"
+               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text56119-4-0-5-0-5"><tspan
+                 x="0"
+                 y="0"
+                 id="tspan56117-8-6-8-9-3"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">GFP</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g93418-4"
+           transform="matrix(0,2.1242055,-2.1242055,0,388.94971,-91.459774)">
+          <path
+             d="m 57.988904,153.68334 0.16041,0.39236 h -0.32105 z"
+             style="fill:none;stroke:#000000;stroke-width:0.461605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path90423-8-1-5-0-0" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.173;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 57.988696,154.3065 v 1.22351"
+             id="path91998-5-3-9-2" />
+        </g>
+        <g
+           id="g93418-0-3"
+           transform="matrix(-1.5020401,1.5020401,-1.5020401,-1.5020401,391.55354,180.93436)">
+          <path
+             d="m 57.988904,153.68334 0.16041,0.39236 h -0.32105 z"
+             style="fill:none;stroke:#000000;stroke-width:0.461605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path90423-8-1-5-0-1-1" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.173;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 57.988696,154.3065 v 1.22351"
+             id="path91998-5-3-9-0-3" />
+        </g>
+        <g
+           id="g56113-7-3-7-5-9"
+           transform="matrix(0.04409722,0,0,0.04409722,49.920356,-258.18152)">
+          <g
+             id="g56115-9-6-9-4-9"
+             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+            <text
+               transform="translate(-7,3.5)"
+               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text56119-4-0-5-1-2"><tspan
+                 x="0"
+                 y="0"
+                 id="tspan56117-8-6-8-5-5"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">r<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan27704-3">prod</tspan></tspan></text>
+          </g>
+        </g>
+        <g
+           id="g56113-7-3-7-5-3-3"
+           transform="matrix(0.04409722,0,0,0.04409722,67.503154,-250.35783)">
+          <g
+             id="g56115-9-6-9-4-7-9"
+             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+            <text
+               transform="translate(-7,3.5)"
+               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text56119-4-0-5-1-3-7"><tspan
+                 x="0"
+                 y="0"
+                 id="tspan56117-8-6-8-5-9-0"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:baseline">r<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan27706-4">deg</tspan></tspan></text>
+          </g>
+        </g>
+      </g>
+      <g
+         id="g27977"
+         transform="translate(-6.3500002,1.9114361)">
+        <g
+           id="g56113-7-3-7-2-6"
+           transform="matrix(0.04409722,0,0,0.04409722,82.45329,-247.04825)">
+          <g
+             id="g56115-9-6-9-9-6"
+             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+            <text
+               transform="translate(-7,3.5)"
+               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text56119-4-0-5-0-1"><tspan
+                 x="0"
+                 y="0"
+                 id="tspan56117-8-6-8-9-2"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial">GFP</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g93418-0-37"
+           transform="matrix(-1.5020401,1.5020401,-1.5020401,-1.5020401,416.44184,187.61532)">
+          <path
+             d="m 57.988904,153.68334 0.16041,0.39236 h -0.32105 z"
+             style="fill:none;stroke:#000000;stroke-width:0.461605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path90423-8-1-5-0-1-5" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.173;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 57.988696,154.3065 v 1.22351"
+             id="path91998-5-3-9-0-4" />
+        </g>
+        <g
+           id="g56113-7-3-7-5-3-2"
+           transform="matrix(0.04409722,0,0,0.04409722,92.391454,-243.67687)">
+          <g
+             id="g56115-9-6-9-4-7-96"
+             transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+            <text
+               transform="translate(-7,3.5)"
+               style="font-variant:normal;font-weight:normal;font-size:11.0078px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text56119-4-0-5-1-3-8"><tspan
+                 x="0"
+                 y="0"
+                 id="tspan56117-8-6-8-5-9-3"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.0078px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:baseline">r<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan27706-43">deg</tspan></tspan></text>
+          </g>
+        </g>
+      </g>
+      <g
+         id="g56113-7-3-2-4"
+         transform="matrix(0.04409722,0,0,0.04409722,54.897475,-233.09293)">
+        <g
+           id="g56115-9-6-2-7"
+           transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+          <text
+             transform="translate(-7,3.5)"
+             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text56119-4-0-2-8"><tspan
+               x="0"
+               y="0"
+               id="tspan56117-8-6-0-6"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">before</tspan></text>
+        </g>
+      </g>
+      <g
+         id="g56113-7-3-2-4-9-5"
+         transform="matrix(0.04409722,0,0,0.04409722,79.867075,-233.09293)">
+        <g
+           id="g56115-9-6-2-7-4-3"
+           transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+          <text
+             transform="translate(-7,3.5)"
+             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text56119-4-0-2-8-9-5"><tspan
+               x="0"
+               y="0"
+               id="tspan56117-8-6-0-6-9-6"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">after</tspan></text>
+        </g>
+      </g>
+      <g
+         id="g28061"
+         transform="translate(-1.0583333,6.4757332)">
+        <path
+           d="M 99.196583,43.735409 98.36313,44.076153 V 43.394176 Z"
+           style="fill:none;stroke:#000000;stroke-width:0.980544;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           id="path90423-8-1-5-0-0-5" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.367;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 99.844748,43.734966 H 58.219719"
+           id="path91998-5-3-9-2-6" />
+      </g>
+      <g
+         id="g56113-7-3-2-4-8"
+         transform="matrix(0.04409722,0,0,0.04409722,71.131412,-225.33127)">
+        <g
+           id="g56115-9-6-2-7-0"
+           transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+          <text
+             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text56119-4-0-2-8-5"
+             x="-9.4363718"
+             y="-18.854647"><tspan
+               x="-9.4363718"
+               y="-18.854647"
+               id="tspan56117-8-6-0-6-3"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">t<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan28095">delay</tspan></tspan></text>
+        </g>
+      </g>
+      <g
+         id="g56113-7-3-2-4-9-5-0"
+         transform="matrix(0.04409722,0,0,0.04409722,80.385832,-228.83095)">
+        <g
+           id="g56115-9-6-2-7-4-3-5"
+           transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+          <text
+             transform="translate(-7,3.5)"
+             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text56119-4-0-2-8-9-5-5"><tspan
+               x="0"
+               y="0"
+               id="tspan56117-8-6-0-6-9-6-1"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">time</tspan></text>
+        </g>
+      </g>
+      <path
+         d="m 47.357722,50.211149 -0.833453,0.340744 v -0.681977 z"
+         style="fill:none;stroke:#000000;stroke-width:0.980544;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path90423-8-1-5-0-0-5-1" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.367;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 48.005887,50.210706 H 14.45065"
+         id="path91998-5-3-9-2-6-3" />
+      <g
+         id="g56113-7-3-2-4-9-5-0-5"
+         transform="matrix(0.04409722,0,0,0.04409722,33.309473,-228.83092)">
+        <g
+           id="g56115-9-6-2-7-4-3-5-0"
+           transform="matrix(8.0037052,0,0,7.9849174,238.51042,6479.6006)">
+          <text
+             transform="translate(-7,3.5)"
+             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text56119-4-0-2-8-9-5-5-2"><tspan
+               x="0"
+               y="0"
+               id="tspan56117-8-6-0-6-9-6-1-1"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">time</tspan></text>
+        </g>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:0.8;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#d35f5f;fill-opacity:1;stroke-width:0.264583"
+         x="32.360352"
+         y="26.520956"
+         id="text12622"><tspan
+           sodipodi:role="line"
+           id="tspan12620"
+           x="32.360352"
+           y="26.520956"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#d35f5f;fill-opacity:1;stroke-width:0.264583">model not accounting </tspan><tspan
+           sodipodi:role="line"
+           x="32.360352"
+           y="29.670324"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#d35f5f;fill-opacity:1;stroke-width:0.264583"
+           id="tspan12624">for repression</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:0.8;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="79.011246"
+         y="26.520956"
+         id="text12622-8"><tspan
+           sodipodi:role="line"
+           id="tspan12620-8"
+           x="79.011246"
+           y="26.520956"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583">model accounting </tspan><tspan
+           sodipodi:role="line"
+           x="79.011246"
+           y="29.670324"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.264583"
+           id="tspan12624-0">for repression</tspan></text>
+    </g>
+    <g
+       id="g35495"
+       style="display:inline"
+       transform="translate(-0.05133162,-2.5567027)">
+      <g
+         id="g26505"
+         transform="translate(-64.294921,1.5875)">
+        <g
+           id="g10039"
+           transform="translate(65.84256,-2.3332278)">
+          <text
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527"
+             id="text56091-0-7-5-0-8-56"
+             x="17.754532"
+             y="69.429138"
+             transform="scale(1.0011758,0.99882559)"><tspan
+               x="17.754532"
+               sodipodi:role="line"
+               id="tspan56089-0-2-2-0-0-5"
+               y="69.429138"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.352527">data</tspan></text>
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.265, 0.265;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 13.199772,68.359287 h 3.564197"
+             id="path155433-2" />
+        </g>
+        <g
+           id="g10034"
+           transform="translate(62.30169,-2.3255271)">
+          <text
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;white-space:pre;inline-size:0;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527"
+             id="text56091-0-7-5-0-8-5-4"
+             x="105.89556"
+             y="22.931301"
+             transform="matrix(1.0011758,0,0,0.99882559,-70.424125,46.468649)"><tspan
+               x="105.89556"
+               id="tspan56089-0-2-2-0-0-6-9"
+               y="22.931301"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke-width:0.352527">fit</tspan></text>
+          <path
+             style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 30.833589,68.359287 h 3.564"
+             id="path155433-1-5" />
+        </g>
+      </g>
+      <text
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;writing-mode:lr-tb;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352527"
+         id="text56091-0-7-5-0-89"
+         x="14.474293"
+         y="64.611176"
+         transform="scale(1.0011758,0.99882559)"><tspan
+           x="14.474293"
+           sodipodi:role="line"
+           id="tspan56089-0-2-2-0-1"
+           y="64.611176"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;fill:#969696;fill-opacity:1;stroke-width:0.352527">model <tspan
+   style="fill:#000000;fill-opacity:1"
+   id="tspan26485">accounting</tspan>/<tspan
+   style="fill:#d35f5f;fill-opacity:1"
+   id="tspan26491">not accounting</tspan> for repression</tspan></text>
     </g>
   </g>
 </svg>
