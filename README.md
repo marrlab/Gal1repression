@@ -2,7 +2,7 @@
 
 contains code and data accompanying 
 
-__Gal1 repression memory in budding yeast__
+__Altered expression response upon repeated gene repression in single yeast cells__
 
 Lea Schuh<sup>1,2,3,4</sup>, Igor Kukhtevich<sup>3</sup>, Poonam Bheda<sup>3</sup>, Melanie Schulz<sup>1,2</sup>, Maria Bordukova<sup>1,2</sup>, Robert Schneider<sup>3,5,6,\*</sup>, Carsten Marr<sup>1,2,\*</sup>
 
@@ -18,7 +18,9 @@ Lea Schuh<sup>1,2,3,4</sup>, Igor Kukhtevich<sup>3</sup>, Poonam Bheda<sup>3</su
 
 ## Summary
 
-Cells must continuously adapt to changing environments and, thus, have evolved mechanisms allowing them to respond to repeated stimuli. For example, faster gene induction upon a repeated stimulus aids adaptation - a process known as reinduction memory. However, whether such a memory exists for gene repression is unclear. Here, we studied gene repression across repeated carbon source shifts in over 2,500 single Saccharomyces cerevisiae cells. By monitoring the expression of a carbon source-responsive gene, galactokinase 1 (Gal1), and mathematical modeling, we discovered repression memory at the population and single-cell level. Using a repressor model to estimate single-cell repression parameters, we show that repression memory is due to a shortened repression delay, the estimated time gap between carbon source shift and Gal1 expression termination, upon the repeated carbon source shift. Additionally, we show that cells lacking Elp6 display a gain-of-repression-memory phenotype characterized by a stronger decrease in repression delay between two consecutive carbon source shifts. Collectively, our study provides the first quantitative description of repression memory in single cells. <br>
+Cells must continuously adjust to changing environments and, thus, have evolved mechanisms allowing them to respond to repeated stimuli. While faster gene induction upon a repeated stimulus is known as reinduction memory, responses to repeated repression have been less studied so far.
+Here, we studied gene repression across repeated carbon source shifts in over 1,500 single Saccharomyces cerevisiae cells. By monitoring the expression of a carbon source-responsive gene, galactokinase 1 (Gal1), and fitting a mathematical model to the single-cell data, we observed a faster response upon repeated repressions at the population level. Exploiting our single-cell data and quantitative modeling approach, we discovered that the faster response is mediated by a shortened repression response delay, the estimated time between carbon source shift and Gal1 protein production termination. Interestingly, we can exclude two alternative hypotheses, i) stronger dilution because of e.g., increased proliferation, and ii) a larger fraction of repressing cells upon repeated repressions.
+Collectively, our study provides a quantitative description of repression kinetics in single cells and allows us to pinpoint potential mechanisms underlying a faster response upon repeated repression. The computational results of our study can serve as the starting point for experimental follow-up studies. <br>
 
 Required software and toolboxes:
 
