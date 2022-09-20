@@ -10,15 +10,26 @@ for istrain = strain1
     for irep = rep1
         
         %load estaimted parameter sets
+%         if iexp == 1
+%             load(sprintf('scR1_strain%d_rep%d_model1',istrain,irep));
+%             scR1_1 = scR;
+%             load(sprintf('scR1_strain%d_rep%d_model2',istrain,irep));
+%             scR1_2 = scR;
+%         else
+%             load(sprintf('scR2_strain%d_rep%d_model1',istrain,irep));
+%             scR1_1 = scR;
+%             load(sprintf('scR2_strain%d_rep%d_model2',istrain,irep));
+%             scR1_2 = scR;
+%         end
         if iexp == 1
-            load(sprintf('scR1_strain%d_rep%d_model1',istrain,irep));
+            load(sprintf('scR1_strain%d_rep%d_model1_var',istrain,irep));
             scR1_1 = scR;
-            load(sprintf('scR1_strain%d_rep%d_model2',istrain,irep));
+            load(sprintf('scR1_strain%d_rep%d_model2_var',istrain,irep));
             scR1_2 = scR;
         else
-            load(sprintf('scR2_strain%d_rep%d_model1',istrain,irep));
+            load(sprintf('scR2_strain%d_rep%d_model1_var',istrain,irep));
             scR1_1 = scR;
-            load(sprintf('scR2_strain%d_rep%d_model2',istrain,irep));
+            load(sprintf('scR2_strain%d_rep%d_model2_var',istrain,irep));
             scR1_2 = scR;
         end
         
@@ -64,11 +75,11 @@ for istrain = strain1
         %save p-values of GFP0 comparison
         sol_GFP0.Pval = Pval;
         
-        if iexp == 1
-            save(sprintf('./Results/sol1_GFP0_%d_%d',istrain,irep),'sol_GFP0')
-        else
-            save(sprintf('./Results/sol2_GFP0_%d_%d',istrain,irep),'sol_GFP0')
-        end
+%         if iexp == 1
+%             save(sprintf('./Results/sol1_GFP0_%d_%d',istrain,irep),'sol_GFP0')
+%         else
+%             save(sprintf('./Results/sol2_GFP0_%d_%d',istrain,irep),'sol_GFP0')
+%         end
     end
 end
 
