@@ -60,15 +60,23 @@ for imodel = model
             %rdeg - degradation rate
             %noise - width of Gaussian modeling the noise
             if imodel == 1
-                parameters.name = {'P0' 'rprod' 'rdeg' 'noise'};
-                parameters.min = [-10, -10, -10, -10];
-                parameters.max = [1, 1, 1, 1];
-                ind = 1:4;
-            else
-                parameters.name = {'P0' 't1' 'rprod' 'rdeg' 'noise'};
-                parameters.min = [-10, -2, -10, -10, -10];
-                parameters.max = [1, log10((size(data,2)-1)*3/60), 1, 1, 1];
+%                 parameters.name = {'P0' 'rprod' 'rdeg' 'noise'};
+%                 parameters.min = [-10, -10, -10, -10];
+%                 parameters.max = [1, 1, 1, 1];
+%                 ind = 1:4;
+                parameters.name = {'P0' 'rprod' 'rdeg' 'noise','noise_stoch0'};
+                parameters.min = [-10, -10, -10, -10, -10];
+                parameters.max = [1, 1, 1, 1, 1];
                 ind = 1:5;
+            else
+%                 parameters.name = {'P0' 't1' 'rprod' 'rdeg' 'noise'};
+%                 parameters.min = [-10, -2, -10, -10, -10];
+%                 parameters.max = [1, log10((size(data,2)-1)*3/60), 1, 1, 1];
+%                 ind = 1:5;
+                parameters.name = {'P0' 't1' 'rprod' 'rdeg' 'noise','noise_stoch0'};
+                parameters.min = [-10, -2, -10, -10, -10, -10];
+                parameters.max = [1, log10((size(data,2)-1)*3/60), 1, 1, 1, 1];
+                ind = 1:6;
             end
             
             %specifiy number of estimated parameters
@@ -99,7 +107,8 @@ for imodel = model
                     optionsPesto.n_starts = 20;
                     
                     %perform optimization
-                    scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6(xi,DA,imodel),optionsPesto);
+                    %scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6(xi,DA,imodel),optionsPesto);
+                    scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6_var(xi,DA,imodel),optionsPesto);
                     
                     %calculate Bayesian Information Criterion (BIC) for
                     %specific total GFP trace and model
@@ -112,7 +121,8 @@ for imodel = model
                         optionsPesto.mode = 'silent';
                         optionsPesto.localOptimizerOptions.GradObj = 'off';
                         optionsPesto.n_starts = 50;
-                        scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6(xi,DA,imodel),optionsPesto);
+                        %scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6(xi,DA,imodel),optionsPesto);
+                        scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6_var(xi,DA,imodel),optionsPesto);
                         scR(icell).sol.BIC = log(length(DA(1).y))*parameters.number-2*scR(icell).sol.MS.logPost(1);
                     end
                     
@@ -123,7 +133,8 @@ for imodel = model
                         optionsPesto.mode = 'silent';
                         optionsPesto.localOptimizerOptions.GradObj = 'off';
                         optionsPesto.n_starts = 100;
-                        scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6(xi,DA,imodel),optionsPesto);
+                        %scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6(xi,DA,imodel),optionsPesto);
+                        scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6_var(xi,DA,imodel),optionsPesto);
                         scR(icell).sol.BIC = log(length(DA(1).y))*parameters.number-2*scR(icell).sol.MS.logPost(1);
                     end
                     
@@ -134,7 +145,8 @@ for imodel = model
                         optionsPesto.mode = 'silent';
                         optionsPesto.localOptimizerOptions.GradObj = 'off';
                         optionsPesto.n_starts = 200;
-                        scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6(xi,DA,imodel),optionsPesto);
+                        %scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6(xi,DA,imodel),optionsPesto);
+                        scR(icell).sol = getMultiStarts(parameters,@(xi)logLikelihood_WTElp6_var(xi,DA,imodel),optionsPesto);
                         scR(icell).sol.BIC = log(length(DA(1).y))*parameters.number-2*scR(icell).sol.MS.logPost(1);
                     end
                     
@@ -158,7 +170,7 @@ for imodel = model
                         P01 = par(indA(1));
                         b1 = par(indA(2));
                         c1 = par(indA(3));
-                        sigmayA = par(indA(4))*ones(length(DA.y),1);
+                        %sigmayA = par(indA(4))*ones(length(DA.y),1);
                         
                     else
                         
@@ -168,7 +180,7 @@ for imodel = model
                         t_rep1 = par(indA(2));
                         b1 = par(indA(3));
                         c1 = par(indA(4));
-                        sigmayA = par(indA(5))*ones(length(DA.y),1);
+                        %sigmayA = par(indA(5))*ones(length(DA.y),1);
                     end
                     
                     %simulate with given parameter set
@@ -206,10 +218,15 @@ for imodel = model
             
             %save the estimated parameters
             if pre_sol == 0
+%                 if iexp == 1
+%                     save(sprintf('./Results/scR1_strain%d_rep%d_model%d',istrain,irep,imodel),'scR')
+%                 else
+%                     save(sprintf('./Results/scR2_strain%d_rep%d_model%d',istrain,irep,imodel),'scR')
+%                 end
                 if iexp == 1
-                    save(sprintf('./Results/scR1_strain%d_rep%d_model%d',istrain,irep,imodel),'scR')
+                    save(sprintf('./Results/scR1_strain%d_rep%d_model%d_var0',istrain,irep,imodel),'scR')
                 else
-                    save(sprintf('./Results/scR2_strain%d_rep%d_model%d',istrain,irep,imodel),'scR')
+                    save(sprintf('./Results/scR2_strain%d_rep%d_model%d_var0',istrain,irep,imodel),'scR')
                 end
             end
         end
