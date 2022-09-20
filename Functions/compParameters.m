@@ -11,25 +11,47 @@ clearvars -except rep1 strain1 rep2 strain2 paired iexp
 clc;
 
 %load all estimated parameter sets for both models and repressions
+% if iexp == 1
+%     load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,1))
+%     scR1_1 = scR;
+%     load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,2))
+%     scR1_2 = scR;
+% 
+%     load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,1))
+%     scR2_1 = scR;
+%     load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,2))
+%     scR2_2 = scR;
+% else
+%     load(sprintf('scR2_strain%d_rep%d_model%d',strain1,rep1,1))
+%     scR1_1 = scR;
+%     load(sprintf('scR2_strain%d_rep%d_model%d',strain1,rep1,2))
+%     scR1_2 = scR;
+%     
+%     load(sprintf('scR2_strain%d_rep%d_model%d',strain2,rep2,1))
+%     scR2_1 = scR;
+%     load(sprintf('scR2_strain%d_rep%d_model%d',strain2,rep2,2))
+%     scR2_2 = scR;
+% end
+
 if iexp == 1
-    load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,1))
+    load(sprintf('scR1_strain%d_rep%d_model%d_var0',strain1,rep1,1))
     scR1_1 = scR;
-    load(sprintf('scR1_strain%d_rep%d_model%d',strain1,rep1,2))
+    load(sprintf('scR1_strain%d_rep%d_model%d_var0',strain1,rep1,2))
     scR1_2 = scR;
 
-    load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,1))
+    load(sprintf('scR1_strain%d_rep%d_model%d_var0',strain2,rep2,1))
     scR2_1 = scR;
-    load(sprintf('scR1_strain%d_rep%d_model%d',strain2,rep2,2))
+    load(sprintf('scR1_strain%d_rep%d_model%d_var0',strain2,rep2,2))
     scR2_2 = scR;
 else
-    load(sprintf('scR2_strain%d_rep%d_model%d',strain1,rep1,1))
+    load(sprintf('scR2_strain%d_rep%d_model%d_var0',strain1,rep1,1))
     scR1_1 = scR;
-    load(sprintf('scR2_strain%d_rep%d_model%d',strain1,rep1,2))
+    load(sprintf('scR2_strain%d_rep%d_model%d_var0',strain1,rep1,2))
     scR1_2 = scR;
     
-    load(sprintf('scR2_strain%d_rep%d_model%d',strain2,rep2,1))
+    load(sprintf('scR2_strain%d_rep%d_model%d_var0',strain2,rep2,1))
     scR2_1 = scR;
-    load(sprintf('scR2_strain%d_rep%d_model%d',strain2,rep2,2))
+    load(sprintf('scR2_strain%d_rep%d_model%d_var0',strain2,rep2,2))
     scR2_2 = scR;
 end
 
@@ -152,10 +174,10 @@ end
 sol_Par.Pval = Pval;
 sol_Par.Median = M;
 
-if iexp == 1
-    save(sprintf('./Results/sol1_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
-else
-    save(sprintf('./Results/sol2_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
-end
+% if iexp == 1
+%     save(sprintf('./Results/sol1_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
+% else
+%     save(sprintf('./Results/sol2_Par_%d_%d_%d_%d_%d',rep1,strain1,rep2,strain2,paired),'sol_Par')
+% end
 
 end
