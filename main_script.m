@@ -181,3 +181,7 @@ comp_GFP0_tdelay(1,1,2,1,1)
 %replicate experiment
 %repression 1 vs 2 for WT, replicate experiment
 comp_GFP0_tdelay(1,1,2,1,2)
+
+%% Check differetn degradation rates (simulation)
+
+simDeg
