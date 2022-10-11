@@ -101,6 +101,7 @@ for istrain = 1:2
     mother_count_r1all = []; %number of daughters per mother cell in repression 1 for all positions
     daughters_IDr2all = []; %cell IDs of daughter cells for repression 2 of all positions
     mother_count_r2all = []; %number of daughters per mother cell in repression 2 for all positions
+    mom_DFr2all = []; %detection frames of mother cells in r2
     
     n_cells_r1 = 0;
     n_cells_r2 = 0;
@@ -111,7 +112,7 @@ for istrain = 1:2
         clearvars -except Data istrain i momGFPr1all momGFPr2all...
             NonDividing n_cells_r1 n_cells_r2 mom_IDr1all mom_IDr2all...
             mom_posr1all mom_posr2all daughters_IDr1all mother_count_r1all...
-            daughters_IDr2all mother_count_r2all iexp n_total
+            daughters_IDr2all mother_count_r2all iexp n_total mom_DFr2all
         
         loadData = sprintf('S%s',Data{i});
         load(loadData);
@@ -237,6 +238,7 @@ for istrain = 1:2
                 %count to 0 for this mother cell
                 mom_IDr2(count_mother_r2) = cell_info(iS,1);
                 mom_posr2(count_mother_r2) = i;
+                mom_DFr2(count_mother_r2) = cell_info(iS,3);
                 mother_count_r2(count_mother_r2) = 0;
                 
                 %update counted number of mother cells for repression 2
@@ -299,6 +301,7 @@ for istrain = 1:2
         mother_count_r1all = [mother_count_r1all,mother_count_r1];
         daughters_IDr2all = [daughters_IDr2all,daughters_IDr2];
         mother_count_r2all = [mother_count_r2all,mother_count_r2];
+        mom_DFr2all = [mom_DFr2all, mom_DFr2];
     end
     
     %remove all empty MATLAB cells of structure containing total GFP of non-dividing cell
@@ -319,18 +322,19 @@ for istrain = 1:2
     NonDividing{istrain}.momcountr2 = mother_count_r2all;
     NonDividing{istrain}.daughtersIDr1 = daughters_IDr1all;
     NonDividing{istrain}.daughtersIDr2 = daughters_IDr2all;
+    NonDividing{istrain}.momDFr2 =  mom_DFr2all;
     
     n_total
 end
 
 if iexp == 1
-    save('./Data/NonDividing1','NonDividing')
+    save('./Melanie/Data/NonDividing1','NonDividing')
     %     xlswrite('./Data/NonDividing1_WT_rep1.xlsx',NonDividing{1}.I5r1,1,'A1');
     %     xlswrite('./Data/NonDividing1_WT_rep2.xlsx',NonDividing{1}.I5r2,1,'A1');
     %     xlswrite('./Data/NonDividing1_elp6_rep1.xlsx',NonDividing{2}.I5r1,1,'A1');
     %     xlswrite('./Data/NonDividing1_elp6_rep2.xlsx',NonDividing{2}.I5r2,1,'A1');
 else
-    save('./Data/NonDividing2','NonDividing')
+    save('./Melanie/Data/NonDividing2','NonDividing')
     %     xlswrite('./Data/NonDividing2_WT_rep1.xlsx',NonDividing{1}.I5r1,1,'A1');
     %     xlswrite('./Data/NonDividing2_WT_rep2.xlsx',NonDividing{1}.I5r2,1,'A1');
     %     xlswrite('./Data/NonDividing2_elp6_rep1.xlsx',NonDividing{2}.I5r1,1,'A1');
