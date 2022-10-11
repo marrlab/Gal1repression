@@ -85,5 +85,5 @@ for  icell = 1:4
     
 end
 
-set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 20 4])
+set(gcf, 'PaperUnits','centimeters', 'PaperPosition',[0 0 26 4])
 print('-dpdf','./Figures/FigS3','-painters')
